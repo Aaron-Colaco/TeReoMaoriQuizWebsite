@@ -25,27 +25,31 @@
     }
   }
     
-    
 #mainHeader {
   font-size: 70px;
   font-weight: bold;
-  margin-bottom: 20px;
-  margin-left: 50%;
-  margin-top: 25%;
-  display: inline-block;
-  color: white;
+
+  
+
 
 }
  #description {
       font-size: 24px;
-      margin-left: 50%;
-      color: white;
-      margin-right: 10px;
-      
-    }
-    
+        }
 
-    #navbar {
+  #homepagetext{
+    color: white;
+    margin-left: 50%;
+    margin-right: 10px;
+    margin-top: 25%;
+  display: inline-block;
+  margin-bottom: 20px;
+  
+  }
+  #homepagetext:hover {
+transform: scale(1.05);
+}
+#navbar {
       position: absolute;
       top: 20px;
       left: 20px;
@@ -69,27 +73,53 @@
     #navbar a:hover {
       background-color: white;
       color: black;
+      transform: scale(1.05);
     }
-  
+
+    #FindOutbtn a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 5%;
+  margin-left: 60%;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white; 
+  background-color: transparent; 
+  border-radius: 2px;
+
+}
+#FindOutbtn a:hover {
+  background-color: white;
+  color: black;}
+ 
+    
     
   </style>
 </head>
 <body>
-
-  
+    <div id="homepagetext">
     <div id="mainHeader">The Myth of Maui And the Sun</div>
     <div id="description">Discover the legendary tale of Maui and the sun.<br>How Maui The great demigod of Maori culture went on a journery to capture the Sun.</div>
-  
+   <div id="FindOutbtn">
+    
+    <a href="about.html">Find Out More</a>
+   </div>
+  </div>
 
   <div id="navbar">
     <nav>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
-    <a href="mythology.html">Mythology</a>
-    <a href="history.html">history</a>
-    <a href="quiz.html">quiz</a>
+    <a href="history.html">History</a>
+    <a href="quiz.html">Quiz</a>
+    
     </nav>
  </div>
+
+
+</div>
  
 </body>
 </html>
