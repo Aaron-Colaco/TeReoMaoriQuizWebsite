@@ -48,34 +48,41 @@
   }
   #homepagetext:hover {
 transform: scale(1.05);
-}
-#navbar {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: white;
-    }
 
-    #navbar  a {
-      text-decoration: none;
-      color: white;
-      margin-right: 20px;
-      font-weight: bold;
-      transition: opacity 0.3s ease-in-out;
-      display: inline-block;
-      color: white;
-       padding: 10px 20px;
-       background-color: black;
-       border-radius: 50px;
-       font-weight: bold;
-    }
+
+}
+
+#navbar {
+  position: fixed;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #ffffff; 
+  margin-right: 20px;
+  font-weight: bold;
+  transition: transform 0.2s, color 0.2s, text-shadow 0.2s; 
+  display: inline-block;
+  padding: 10px 20px;
+  width: 90px;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+#navbar a:hover {
+  color: #ffffff; 
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
 
     #navbar a:hover {
-      background-color: white;
-      color: black;
-      transform: scale(1.05);
+      font-size: 28px; 
+      transform: scale(1.1)
     }
-
     #FindOutbtn a {
   display: inline-block;
   padding: 10px 20px;
@@ -88,14 +95,19 @@ transform: scale(1.05);
   border: 2px solid white; 
   background-color: transparent; 
   border-radius: 2px;
-
+  animation: bounce 1s infinite;
 }
 #FindOutbtn a:hover {
   background-color: white;
   color: black;}
  
-    
-    
+#logo{
+  padding-left: 40%;
+ height: 50px;
+ width: 200px;
+ transition: height 0.3s, width 0.3s;
+}
+  
   </style>
 </head>
 <body>
@@ -114,6 +126,7 @@ transform: scale(1.05);
     <a href="about.html">About</a>
     <a href="history.html">History</a>
     <a href="quiz.html">Quiz</a>
+    <img id="logo" src="Screenshot 2023-08-18 at 12.45.19 PM copy.png" alt="">
     
     </nav>
  </div>
