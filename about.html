@@ -1,68 +1,102 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body> 
-        <div id="navbar">
-        <nav>
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="history.html">History</a>
-        <a href="quiz.html">Quiz</a>
-        
-    </nav>
-     </div>
-      <div class="mainaboutpage">
+  
+<body>
 
-        <h1 class="mainTitle">The Legend of Maui and the Sun</h1>
-        <div class="boxContent">
-         <div class="box">
-            <div class="title">
-        <a href="dark-day"><h3>The Dark Days</h3></a> 
-            </div>
-            <a href="dark-days">
+<section id="main">
+  <div id="navbar">
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="history.html">History</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </div>
+  <div class="content">
+    <h2 class="pageTitle">The Legend of Maui and the Sun</h2>
+    <div class="boxes">
+      <div class="box">
+        <h3 class="title">The Dark Days</h3>
+        <a href="#dark-days">
           <div class="img-box">
-           <img src="thedarkdays.png" alt="Dark Days">
+            <img src="thedarkdays.png" alt="Dark Days">
           </div>
         </a>
-        <div class="story-box">
-          <p>Long ago, the world was engulfed in darkness. Maui, a clever demigod, took it upon himself to bring light back to the world.</p>
-        </div>
+        <p class="boxText">Long ago, the world was engulfed in darkness. Maui, a clever demigod, took it upon himself to bring light back to the world.</p>
       </div>
       <div class="box">
-        <div class="title">
-          <h3>How Maui Captured the Sun</h3>
-        </div>
+        <h3 class="title">How Maui Captured the Sun</h3>
         <a href="#sun-capture">
           <div class="img-box">
             <img src="mauicapturingthesun.png" alt="Maui Captures the Sun">
           </div>
         </a>
-        <div class="story-box">
-          <p>Maui devised a plan to capture the powerful sun. He crafted a special net and laid a trap, snaring the sun and forcing it to slow its blazing journey across the sky.</p>
-        </div>
+        <p class="boxText">Maui devised a plan to capture the powerful sun. He crafted a special net and laid a trap, snaring the sun and forcing it to slow its blazing journey across the sky.</p>
       </div>
       <div class="box">
-        <div class="title">
-          <h3>Maui in Today's World</h3>
-        </div>
+        <h3 class="title">Maui in Today's World</h3>
         <a href="#maui-today">
           <div class="img-box">
             <img src="MauiGod.png" alt="Maui in Today's World">
           </div>
         </a>
-        <div class="story-box">
-          <p>While Maui's legendary feats are part of ancient history, his spirit lives on in stories and art, reminding us of his bravery and cleverness.</p>
-        </div>
+        <p class="boxText">While Maui's legendary feats are part of ancient history, his spirit lives on in stories and art, reminding us of his bravery and cleverness.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="dark-days">
+ "The Dark Days" goes here 
+</section>
+
+<section id="sun-capture">
+how maui captured the sun 
+</section>
+
+<section id="maui-today">
+  why maui is significant today 
 
 
 
+ <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    
+    section {
+      width: 100%;
+      height: 100vh;
+    }
+.content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .boxes {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .box {
+      width: 30%;
+      min-height: 75vh;
+      background-color: #c59100;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
 
+</style>
 
-
-
-     </div>
+</body>
+</html>
