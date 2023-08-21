@@ -30,15 +30,16 @@ font-weight: bold;
 
 #homepagetext{
 color: white;
-margin-left: 50%;
-margin-right: 10px;
-margin-top: 25%;
+margin-left: 25%;
+margin-right: 25%;
+margin-top: 20%;
 display: inline-block;
 margin-bottom: 20px;
 
 }
 #homepagetext:hover {
 transform: scale(1.05);
+
 
 
 }
@@ -50,6 +51,7 @@ left: 0;
 width: 100%;
 box-sizing: border-box;
 background-color: #000000;
+z-index: 1000;
 }
 
 #navbar a {
@@ -69,12 +71,15 @@ font-size: 20px;
 #navbar a:hover {
 color: #ffffff; 
 text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+font-size: 28px; 
+transition: 1s;
 }
 
 #navbar a:hover {
-  font-size: 28px; 
-  transform: scale(1.1)
+
+
 }
+
 #FindOutbtn a {
 display: inline-block;
 padding: 10px 20px;
@@ -125,7 +130,7 @@ width: 200px;
     width: 100%;
     height: 100vh;
   }
-  #main {
+  #main, #darkDays {
     background-color: rgb(0, 0, 0);
   }
      .content{
@@ -193,6 +198,20 @@ transition: transform 0.3s ease;
     padding-bottom: 1%;
     color: #ffff;
     text-align: center;
+
   }
+.sectionTiltle{
+  margin-top: 0;
+  padding-top: 60px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
 
   
+}
+.darkDays2Image{
+  width: 30%;
+  height: 80%;
+  border-radius: 30px;
+
+}
