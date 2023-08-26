@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html>
+
+
+<style>
+  .quizbox{
+    align-content: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+</style>
 <head>
+
+
 <style>
   
 
 </style>
 </head>
 <body>
+    <h1 id="welcomeMessage"></h1> 
   
 <div class = "Nameinputbox">
   <h1>Please enter your name to begin</h1>
   <input id="userName">
   <button onclick="getVaildatedName()">Proccred to Maui and the Sun Quiz</button>
+
 </div>
-  <h1 id="welcomeMessage"></h1> 
+
+<div class="quizbox">
+
+  <h1>
+ What level do you want to do please click the buttons bellow
+  </h1>
+  <divlevelSelcetor>
+  
+    <button class="easyLevelButton"onclick="easyLevel()">Easy</button>
+    <button class="meidumLevelButton" onclick="mediumLevel()">Medium</button>
+    <button class="hardLevelButton"onclick="hardlevel()">Hard</button>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <script>
 function getVaildatedName(){
  
@@ -21,18 +60,30 @@ function getVaildatedName(){
     let welcomeMessage = document.querySelector("#welcomeMessage");
     let Nameinputbox = document.querySelector(".Nameinputbox")
 
-    if (userName.value.length < 1 || userName.value.length > 30){
-      alert("Please enter a name between 1-30 characters to beginx")
+   if (userName.value.length < 1 || userName.value.length > 30){
+   alert("Please enter a name between 1-30 characters to beginx")
     }
     else{
 
    welcomeMessage.innerHTML ="Welcome " + userName.value +", to this Maui and the Sun Maoir Quiz ";
    Nameinputbox.style.display = "none";
     }
-    
-
-
 }
+
+function easyLevel(){
+  alert("you picked level easy");
+}
+  
+function mediumLevel(){
+  alert("you picked level easy");
+}
+  
+function hardLevel(){
+  alert("you picked hard easy");
+}
+
+  
+
 
 
 
