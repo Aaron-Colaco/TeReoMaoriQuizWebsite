@@ -70,8 +70,38 @@ function getVaildatedName(){
     }
 }
 
+const easyQuestions = [
+  "What did Maui use to capture the sun?",
+  "What color was the sun?",
+  "Why did Maui capture the sun?"
+];
+
+const easyAnswers = [
+  "flax ropes",
+  "red",
+  "to slow down its movement"
+];
+
+const easyOptions = [
+  ["a weapon", "his hands", "flax ropes", "his voice"],
+  ["yellow", "blue", "red", "white"],
+  ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
+];
+  
+
+function Quiz(questions, answers, options)
+{
+  
+
+  
+}
+
+
+
+
 function easyLevel(){
-  alert("you picked level easy");
+  Quiz(easyQuestions,easyAnswers,easyOptions)
+
 }
   
 function mediumLevel(){
@@ -82,11 +112,11 @@ function hardLevel(){
   alert("you picked hard easy");
 }
 
-  
+  function startQuiz(  )
 
 
 
 
-    </script>
+    </script> 
 </body>
 </html>
