@@ -7,16 +7,25 @@
 </style>
 </head>
 <body>
+  <h1 class="welcomeMessage">
+
+  </h1>
 
   <h1>Please enter your name to begin</h1>
-  <input>
+  <input id="userName">
   <button onclick="getVaildatedName()">Proccred to Maui and the Sun Quiz</button>
 
 
     <script>
 function getVaildatedName(){
  
-    alert("hi button my first button");
+    let userName = document.querySelector("#userName");
+    let welcomeMessage = document.querySelector(".welcomeMessage");
+
+   welcomeMessage.innerHTML ="Welcome " + userName;
+
+    
+
 
 }
 
