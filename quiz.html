@@ -43,6 +43,15 @@
   
 </div>
 
+<Div quiz box>
+<h1 id="question">here goes question</h1>
+  <h1 id="option1"> o1 </h1>
+  <h1 id="option2"> o2</h1>
+  <h1 id="option3"> o3</h1>
+  <h1 id="option4"> o4</h1>
+
+</Div>
+
 
 
 
@@ -71,9 +80,7 @@ function getVaildatedName(){
 }
 
 const easyQuestions = [
-  "What did Maui use to capture the sun?",
-  "What color was the sun?",
-  "Why did Maui capture the sun?"
+  "What did Maui use to capture the sun?","What color was the sun?","Why did Maui capture the sun?"
 ];
 
 const easyAnswers = [
@@ -82,19 +89,34 @@ const easyAnswers = [
   "to slow down its movement"
 ];
 
+
+
 const easyOptions = [
   ["a weapon", "his hands", "flax ropes", "his voice"],
   ["yellow", "blue", "red", "white"],
   ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
 ];
-  
-
+ 
+let question = document.querySelector("#question");
+let option1 =  document.querySelector("#option1");
+let option2 =  document.querySelector("#option2");
+let option3 =  document.querySelector("#option3");
+let option4 =  document.querySelector("#option4");
+   
+   
 function Quiz(questions, answers, options)
 {
-  
+  for (let i = 0; i < questions.length; i++) {
+    question.innerHTML = questions[i];
 
-  
+    option1.innerHTML = options[i][0];
+    option2.innerHTML = options[i][1];
+    option3.innerHTML = options[i][2];
+    option4.innerHTML = options[i][3];
+    
 }
+}
+
 
 
 
@@ -112,7 +134,6 @@ function hardLevel(){
   alert("you picked hard easy");
 }
 
-  function startQuiz(  )
 
 
 
