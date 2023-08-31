@@ -45,11 +45,12 @@
 
 <Div quiz box>
   <h1 id="question">Here goes the question</h1>
-  <button id="option1" data-value="1" onclick="checkAnswer()">Option 1</button>
-  <button id="option2" data-value="2" onclick="checkAnswer()">Option 2</button>
-  <button id="option3" data-value="3" onclick="checkAnswer()">Option 3</button>
-  <button id="option4" data-value="4" onclick="checkAnswer()">Option 4</button>
-  <button id="nextButton" onclick="nextQuestion()">Go to Next Question</button>
+  <button id="option1" onclick="checkAnswer(1)">Option 1</button>
+  <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
+  <button id="option3" onclick="checkAnswer(3)">Option 3</button>
+  <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
+  <button id="nextButton" style="display:none;" onclick="nextQuestion()">Go 
+
 
 </Div>
 
@@ -120,6 +121,12 @@ displayQuestion()
     option4.innerHTML = options[i][3];
     
 }
+function checkAnswer(selectedOption) {
+      const userChoice = selectedOption;
+      console.log(userChoice);
+    }
+    
+
 
     function nextQuestion() {
      
