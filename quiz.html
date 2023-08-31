@@ -50,7 +50,7 @@
   <button id="option3" onclick="checkAnswer(3)">Option 3</button>
   <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
   <button id="nextButton" style="display:none;" onclick="nextQuestion()">Go 
-
+    <h1 id="feedback"></h1>
 
 </Div>
 
@@ -123,11 +123,18 @@ displayQuestion()
 }
 function checkAnswer(selectedOption) {
       const userChoice = selectedOption;
-      console.log(userChoice);
+      const correctAnswer = answersArray[i];
+      if (userChoice == correctAnswer) {     
+        feedback.innerHTML = "Correct!";
+      } else {
+        feedback.innerHTML = "Incorrect!";
+      }
+     
     }
-    
 
 
+
+document.querySelector("#feedback")
     function nextQuestion() {
      
       if (i < questions.length) {
