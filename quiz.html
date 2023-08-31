@@ -103,11 +103,15 @@ let option2 =  document.querySelector("#option2");
 let option3 =  document.querySelector("#option3");
 let option4 =  document.querySelector("#option4");
    
-   
-function Quiz(questions, answers, options)
+  
+    let questionsArray = [];
+    let optionsArray = [];
+    let answersArray = [];
+    let i = 0;
+
+
+displayQuestion()
 {
-  for (let i = 0; i < questions.length; i++) {
-    question.innerHTML = questions[i];
 
     option1.innerHTML = options[i][0];
     option2.innerHTML = options[i][1];
@@ -115,7 +119,22 @@ function Quiz(questions, answers, options)
     option4.innerHTML = options[i][3];
     
 }
-}
+
+    function nextQuestion() {
+     
+      if (i < questions.length) {
+        displayQuestion();
+        
+      } else {
+        question.innerHTML = 'Quiz completed!';
+      }
+      feedback.innerHTML = "";
+    }
+
+    function displayNextQuestion() {
+      nextQuestion();
+    }
+
 
 
 
