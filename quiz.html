@@ -111,6 +111,15 @@ let option4 =  document.querySelector("#option4");
     let answersArray = [];
     let i = 0;
 
+    function Quiz(qArray, oArray, aArray) {
+      questionsArray = qArray;
+      optionsArray = oArray;
+      answersArray = aArray;
+      displayQuestion();
+    
+    }
+
+
 
 displayQuestion()
 {
@@ -128,6 +137,7 @@ function checkAnswer(selectedOption) {
         feedback.innerHTML = "Correct!";
       } else {
         feedback.innerHTML = "Incorrect!";
+
       }
      
     }
@@ -156,6 +166,7 @@ document.querySelector("#feedback")
 
 
 function easyLevel(){
+ 
   Quiz(easyQuestions,easyAnswers,easyOptions)
 
 }
