@@ -33,6 +33,8 @@
     <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
     <button id="nextButton"  onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
+    <div id ="score">0</div>
+    <h1 id="progrss">progrss</h1>
   </div>
 
   <script>
@@ -45,6 +47,11 @@
     let option3 = document.querySelector("#option3");
     let option4 = document.querySelector("#option4");
     let feedback = document.querySelector("#feedback");
+    let score = document.querySelector("#score");
+    let progrss = document.querySelector("#progress");
+
+    let currentscore = 0;
+  
     let i = 0;
     let questionsArray = [];
     let optionsArray = [];
@@ -79,8 +86,11 @@
       const userChoice = selectedOption;
       const correctAnswer = answersArray[i];
       if (userChoice == correctAnswer) {
-        
+        score.innerHTML = ++score;
         feedback.innerHTML = "Correct!";
+        currentScore++;
+        score.innerHTML = currentScore;
+
       } else {
         feedback.innerHTML = "Incorrect!";
       }
@@ -98,9 +108,7 @@
       feedback.innerHTML = "";
     }
 
-    function displayNextQuestion() {
-      nextQuestion();
-    }
+    
 
 
 
