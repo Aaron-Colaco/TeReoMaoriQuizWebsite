@@ -1,115 +1,65 @@
 <!DOCTYPE html>
 <html>
-
-
+<head>
 <style>
-  .quizbox{
-    align-content: center;
+  .quizbox {
+    text-align: center;
     margin-right: 25%;
     margin-left: 25%;
     margin-top: 10%;
   }
 </style>
-<head>
-
-
-<style>
-  
-
-</style>
 </head>
 <body>
-    <h1 id="welcomeMessage"></h1> 
-  
-<div class = "Nameinputbox">
-  <h1>Please enter your name to begin</h1>
-  <input id="userName">
-  <button onclick="getVaildatedName()">Proccred to Maui and the Sun Quiz</button>
-
-</div>
-
-<div class="quizbox">
-
-  <h1>
- What level do you want to do please click the buttons bellow
-  </h1>
-  <divlevelSelcetor>
-  
-    <button class="easyLevelButton"onclick="easyLevel()">Easy</button>
-    <button class="meidumLevelButton" onclick="mediumLevel()">Medium</button>
-    <button class="hardLevelButton"onclick="hardlevel()">Hard</button>
-  
+  <h1 id="welcomeMessage"></h1>
+  <div class="Nameinputbox">
+    <h1>Please enter your name to begin</h1>
+    <input id="userName">
+    <button onclick="getValidatedName()">Proceed to Maui and the Sun Quiz</button>
   </div>
-  
-</div>
-
-<Div quiz box>
-  <h1 id="question">Here goes the question</h1>
-  <button id="option1" onclick="checkAnswer(1)">Option 1</button>
-  <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
-  <button id="option3" onclick="checkAnswer(3)">Option 3</button>
-  <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
-  <button id="nextButton" style="display:none;" onclick="nextQuestion()">Go 
+  <div class="quizbox">
+    <h1>What level do you want to do? Please click the buttons below</h1>
+    <div id="levelSelector">
+      <button class="easyLevelButton" onclick="easyLevel()">Easy</button>
+      <button class="mediumLevelButton" onclick="mediumLevel()">Medium</button>
+      <button class="hardLevelButton" onclick="hardLevel()">Hard</button>
+    </div>
+  </div>
+  <div class="quizbox">
+    <h1 id="question">Here goes the question</h1>
+    <button id="option1" onclick="checkAnswer(1)">Option 1</button>
+    <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
+    <button id="option3" onclick="checkAnswer(3)">Option 3</button>
+    <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
+    <button id="nextButton" style="display:none;" onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
+  </div>
 
-</Div>
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-function getVaildatedName(){
- 
+  <script>
     let userName = document.querySelector("#userName");
     let welcomeMessage = document.querySelector("#welcomeMessage");
-    let Nameinputbox = document.querySelector(".Nameinputbox")
-
-   if (userName.value.length < 1 || userName.value.length > 30){
-   alert("Please enter a name between 1-30 characters to beginx")
-    }
-    else{
-
-   welcomeMessage.innerHTML ="Welcome " + userName.value +", to this Maui and the Sun Maoir Quiz ";
-   Nameinputbox.style.display = "none";
-    }
-}
-
-const easyQuestions = [
-  "What did Maui use to capture the sun?","What color was the sun?","Why did Maui capture the sun?"
-];
-
-const easyAnswers = [
-  "flax ropes",
-  "red",
-  "to slow down its movement"
-];
-
-
-
-const easyOptions = [
-  ["a weapon", "his hands", "flax ropes", "his voice"],
-  ["yellow", "blue", "red", "white"],
-  ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
-];
- 
-let question = document.querySelector("#question");
-let option1 =  document.querySelector("#option1");
-let option2 =  document.querySelector("#option2");
-let option3 =  document.querySelector("#option3");
-let option4 =  document.querySelector("#option4");
-   
-  
+    let nameInputBox = document.querySelector(".Nameinputbox");
+    let question = document.querySelector("#question");
+    let option1 = document.querySelector("#option1");
+    let option2 = document.querySelector("#option2");
+    let option3 = document.querySelector("#option3");
+    let option4 = document.querySelector("#option4");
+    let feedback = document.querySelector("#feedback");
+    document.getElementById("nextButton").addEventListener('click', displayNextQuestion);
+    let i = 0;
     let questionsArray = [];
     let optionsArray = [];
     let answersArray = [];
-    let i = 0;
+
+    function getValidatedName() {
+      
+      if (userName.value.length < 1 || userName.value.length > 30) {
+        alert("Please enter a name between 1-30 characters to begin");
+      } else {
+        welcomeMessage.innerHTML = "Welcome " + userName.value + ", to this Maui and the Sun Maori Quiz";
+
+      }
+    }
 
     function Quiz(qArray, oArray, aArray) {
       questionsArray = qArray;
@@ -118,38 +68,31 @@ let option4 =  document.querySelector("#option4");
       displayQuestion();
     
     }
-
-
-
-displayQuestion()
-{
-
-    option1.innerHTML = options[i][0];
-    option2.innerHTML = options[i][1];
-    option3.innerHTML = options[i][2];
-    option4.innerHTML = options[i][3];
+    function displayQuestion() {
+      question.innerHTML = questionsArray[i];
+      option1.innerHTML = optionsArray[i][0];
+      option2.innerHTML = optionsArray[i][1];
+      option3.innerHTML = optionsArray[i][2];
+      option4.innerHTML = optionsArray[i][3];
+    }  
     
-}
-function checkAnswer(selectedOption) {
+    function checkAnswer(selectedOption) {
       const userChoice = selectedOption;
       const correctAnswer = answersArray[i];
-      if (userChoice == correctAnswer) {     
+      if (userChoice == correctAnswer) {
+        
         feedback.innerHTML = "Correct!";
       } else {
         feedback.innerHTML = "Incorrect!";
-
       }
      
     }
 
-
-
-document.querySelector("#feedback")
     function nextQuestion() {
      
-      if (i < questions.length) {
+      if (i < questionsArray.length) {
         displayQuestion();
-        
+        i++;
       } else {
         question.innerHTML = 'Quiz completed!';
       }
@@ -162,27 +105,54 @@ document.querySelector("#feedback")
 
 
 
+    function easyLevel() {
+      const easyQuestions = [
+        "What did Maui use to capture the sun?",
+        "What color was the sun?",
+        "Why did Maui capture the sun?"
+      ];
 
+      const easyAnswers = [
+        1,
+        0,
+        3
+      ];
 
+      const easyOptions = [
+        ["a weapon", "his hands", "flax ropes", "his voice"],
+        ["yellow", "blue", "red", "white"],
+        ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
+      ];
 
-function easyLevel(){
- 
-  Quiz(easyQuestions,easyAnswers,easyOptions)
+      Quiz(easyQuestions, easyOptions, easyAnswers);
+    }
 
-}
-  
-function mediumLevel(){
-  alert("you picked level easy");
-}
-  
-function hardLevel(){
-  alert("you picked hard easy");
-}
+    function mediumLevel() {
+      const mQuestions = [
+        "What did Maui use tob ggggv capture the sun?",
+        "What color was the sun?",
+        "Why did Maui capture the sun?"
+      ];
 
+      const mAnswers = [
+        1,
+        0,
+        3
+      ];
 
+      const mOptions = [
+        ["a weapon", "his hands", "flax ropes", "his voice"],
+        ["yellow", "blue", "red", "white"],
+        ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
+      ];
 
+      Quiz(mQuestions, mOptions, mAnswers);
+    }
 
-
-    </script> 
+    function hardLevel() {
+      alert("You picked hard level");
+    }
+  </script>
 </body>
 </html>
+
