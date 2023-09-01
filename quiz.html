@@ -31,7 +31,7 @@
     <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
     <button id="option3" onclick="checkAnswer(3)">Option 3</button>
     <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
-    <button id="nextButton" style="display:none;" onclick="nextQuestion()">Go to Next Question</button>
+    <button id="nextButton"  onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
   </div>
 
@@ -45,7 +45,6 @@
     let option3 = document.querySelector("#option3");
     let option4 = document.querySelector("#option4");
     let feedback = document.querySelector("#feedback");
-    document.getElementById("nextButton").addEventListener('click', displayNextQuestion);
     let i = 0;
     let questionsArray = [];
     let optionsArray = [];
