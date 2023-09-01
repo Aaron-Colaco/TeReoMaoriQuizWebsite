@@ -88,10 +88,10 @@
     }
 
     function nextQuestion() {
-     
+      i++;
       if (i < questionsArray.length) {
         displayQuestion();
-        i++;
+   
       } else {
         question.innerHTML = 'Quiz completed!';
       }
@@ -107,20 +107,20 @@
     function easyLevel() {
       const easyQuestions = [
         "What did Maui use to capture the sun?",
-        "What color was the sun?",
+        "What color is the sun?",
         "Why did Maui capture the sun?"
       ];
 
       const easyAnswers = [
-        1,
-        0,
-        3
+        3,
+        4,
+        4
       ];
 
       const easyOptions = [
         ["a weapon", "his hands", "flax ropes", "his voice"],
-        ["yellow", "blue", "red", "white"],
-        ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
+        ["Kakariki", "hh", "green", "white"],
+        ["to keep it warm", "to make it brighter", "to slow down its movement", "All of the Above"]
       ];
 
       Quiz(easyQuestions, easyOptions, easyAnswers);
