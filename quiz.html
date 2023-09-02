@@ -55,7 +55,6 @@
     let questionsArray = [];
     let optionsArray = [];
     let answersArray = [];
-    let correctWordAnswer[];
     let points = 0;
 
     function getValidatedName() {
@@ -68,12 +67,11 @@
       }
     }
     
-    function Quiz(qArray, oArray, aArray,cArray) {
+    function Quiz(qArray, oArray, aArray) {
        
       questionsArray = qArray;
       optionsArray = oArray;
       answersArray = aArray;
-      correctWordAnswer = cArray
       displayQuestion();
     
     }
@@ -96,7 +94,7 @@
         feedback.innerHTML = "Correct!";
       
       } else {
-        feedback.innerHTML = "Incorrect! the correct answer is " + ;
+        feedback.innerHTML = "Incorrect! the correct answer is " + optionsArray[i][(CorrectAnswer - 1)];
       }
      
     }
@@ -135,9 +133,7 @@
         ["to keep it warm", "to make it brighter", "to slow down its movement", "All of the Above"]
       ];
 
-      
-
-      Quiz(easyQuestions, easyOptions, easyAnswers,easycorrectAnswer);
+      Quiz(easyQuestions, easyOptions, easyAnswers);
     }
 
     function mediumLevel() {
@@ -159,9 +155,6 @@
         ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
       ];
 
-      const easycorrectAnswer = [
-        "Flax ropes","white","all of the above"
-      ]
       Quiz(mQuestions, mOptions, mAnswers);
     }
 
