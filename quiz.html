@@ -34,7 +34,7 @@
     <button id="nextButton"  onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
     <p>Score: <span id="score">0</span></p>
-    <h1 id="progrss">progrss</h1>
+    <h1 id="progresss">progrss Question 0/0</h1>
   </div>
 
   <script>
@@ -48,7 +48,7 @@
     let option4 = document.querySelector("#option4");
     let feedback = document.querySelector("#feedback");
     let score = document.querySelector("#score");
-    let progrss = document.querySelector("#progress");
+    let progrss = document.querySelector("#progresss");
 
   
     let i = 0;
@@ -81,6 +81,8 @@
       option2.innerHTML = optionsArray[i][1];
       option3.innerHTML = optionsArray[i][2];
       option4.innerHTML = optionsArray[i][3];
+      
+      progresss.innerHTML = "Question " +(i + 1) + " out of " + questionsArray.length;
     }  
     
     function checkAnswer(selectedOption) {
