@@ -33,7 +33,7 @@
     <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
     <button id="nextButton"  onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
-    <div id ="score">0</div>
+    <p>Score: <span id="score">0</span></p>
     <h1 id="progrss">progrss</h1>
   </div>
 
@@ -50,12 +50,12 @@
     let score = document.querySelector("#score");
     let progrss = document.querySelector("#progress");
 
-    let currentscore = 0;
   
     let i = 0;
     let questionsArray = [];
     let optionsArray = [];
     let answersArray = [];
+    let points = 0;
 
     function getValidatedName() {
       
@@ -66,8 +66,9 @@
 
       }
     }
-
+    
     function Quiz(qArray, oArray, aArray) {
+       
       questionsArray = qArray;
       optionsArray = oArray;
       answersArray = aArray;
@@ -86,11 +87,10 @@
       const userChoice = selectedOption;
       const correctAnswer = answersArray[i];
       if (userChoice == correctAnswer) {
-        score.innerHTML = ++score;
+        points++;
+        score.innerHTML = points;
         feedback.innerHTML = "Correct!";
-        currentScore++;
-        score.innerHTML = currentScore;
-
+      
       } else {
         feedback.innerHTML = "Incorrect!";
       }
