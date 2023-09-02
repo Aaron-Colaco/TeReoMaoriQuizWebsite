@@ -11,31 +11,46 @@
 </style>
 </head>
 <body>
+  <div>
   <h1 id="welcomeMessage"></h1>
   <div class="Nameinputbox">
     <h1>Please enter your name to begin</h1>
     <input id="userName">
     <button onclick="getValidatedName()">Proceed to Maui and the Sun Quiz</button>
   </div>
-  <div class="quizbox">
+  
+
+
+  <div id="levelBox" style="display: none;" >
     <h1>What level do you want to do? Please click the buttons below</h1>
-    <div id="levelSelector">
+  
       <button class="easyLevelButton" onclick="easyLevel()">Easy</button>
       <button class="mediumLevelButton" onclick="mediumLevel()">Medium</button>
       <button class="hardLevelButton" onclick="hardLevel()">Hard</button>
-    </div>
   </div>
-  <div class="quizbox">
+
+
+    <div id="quizBox" style="display: none;">
     <h1 id="question">Here goes the question</h1>
+    <div id ="optionButtons">
     <button id="option1" onclick="checkAnswer(1)">Option 1</button>
     <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
     <button id="option3" onclick="checkAnswer(3)">Option 3</button>
     <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
-    <button id="nextButton"  onclick="nextQuestion()">Go to Next Question</button>
+  </div>
+    <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
     <h1 id="feedback"></h1>
     <p>Score: <span id="score">0</span></p>
     <h1 id="progresss">progrss Question 0/0</h1>
+
   </div>
+  <div id="replayMenu" style="display: none;"> 
+  <h4>Would you like to go home or Replay the quiz</h4>
+
+
+  <a href="home.html"> Click here to go home</a>
+  <Button onclick="loadMenu()">Go to level menu</Button>
+</div>
 
   <script>
     let userName = document.querySelector("#userName");
@@ -46,9 +61,16 @@
     let option2 = document.querySelector("#option2");
     let option3 = document.querySelector("#option3");
     let option4 = document.querySelector("#option4");
+    
+    
     let feedback = document.querySelector("#feedback");
     let score = document.querySelector("#score");
     let progrss = document.querySelector("#progresss");
+    let levelBox = document.querySelector("#levelBox");
+    let nextButton = document.querySelector("#nextButton")
+    let optionsButtons = document.querySelector("#optionButtons")
+    let quizbox = document.querySelector("#quizBox")
+    let Replay = document.querySelector("#replayMenu")
 
   
     let i = 0;
@@ -63,19 +85,24 @@
         alert("Please enter a name between 1-30 characters to begin");
       } else {
         welcomeMessage.innerHTML = "Welcome " + userName.value + ", to this Maui and the Sun Maori Quiz";
-
+        nameInputBox.style.display = "none";
+        levelBox.style.display = "block";
       }
     }
     
     function Quiz(qArray, oArray, aArray) {
-       
+     
+      quizbox.style.display ="block";
       questionsArray = qArray;
       optionsArray = oArray;
       answersArray = aArray;
       displayQuestion();
+      levelBox.style.display = "none";
+    
     
     }
     function displayQuestion() {
+     
       question.innerHTML = questionsArray[i];
       option1.innerHTML = optionsArray[i][0];
       option2.innerHTML = optionsArray[i][1];
@@ -83,38 +110,58 @@
       option4.innerHTML = optionsArray[i][3];
       
       progresss.innerHTML = "Question " +(i + 1) + " out of " + questionsArray.length;
+      nextButton.style.display = "none";
+      optionsButtons.style.display="block";
     }  
     
     function checkAnswer(selectedOption) {
+      nextButton.style.display = "block";
+      optionsButtons.style.display = "none";
+  
       const userChoice = selectedOption;
       const correctAnswer = answersArray[i];
       if (userChoice == correctAnswer) {
         points++;
         score.innerHTML = points;
         feedback.innerHTML = "Correct!";
+  
       
       } else {
-        feedback.innerHTML = "Incorrect! the correct answer is " + optionsArray[i][(CorrectAnswer - 1)];
+         feedback.innerHTML = "Incorrect! The correct answer is " + optionsArray[i][(correctAnswer - 1)];
       }
-     
+    
     }
 
     function nextQuestion() {
       i++;
+     nextButton.style.display = "none";
       if (i < questionsArray.length) {
+        
         displayQuestion();
    
       } else {
-        question.innerHTML = 'Quiz completed!';
+        question.innerHTML = "Quiz completed, " +  userName.value + ", You got " + points + " Out of " + questionsArray.length;
+        progrss.style.display = "none";
+        Replay.style.display = "block";
+      
+
       }
       feedback.innerHTML = "";
+      
     }
 
+    function loadMenu(){
+      welcomeMessage.innerHTML = "Welcome Back " + userName.value;
+      levelBox.style.display = "block";
+      
+    }
     
 
 
 
     function easyLevel() {
+      
+      
       const easyQuestions = [
         "What did Maui use to capture the sun?",
         "What color is the sun?",
