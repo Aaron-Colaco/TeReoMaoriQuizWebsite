@@ -8,6 +8,7 @@
     margin-left: 25%;
     margin-top: 10%;
   }
+  
 </style>
 </head>
 <body>
@@ -45,6 +46,7 @@
 
   </div>
   <div id="replayMenu" style="display: none;"> 
+
   <h4>Would you like to go home or Replay the quiz</h4>
 
 
@@ -71,6 +73,7 @@
     let optionsButtons = document.querySelector("#optionButtons")
     let quizbox = document.querySelector("#quizBox")
     let Replay = document.querySelector("#replayMenu")
+    let prcentage = 0;
 
   
     let i = 0;
@@ -140,11 +143,7 @@
         displayQuestion();
    
       } else {
-        question.innerHTML = "Quiz completed, " +  userName.value + ", You got " + points + " Out of " + questionsArray.length;
-        progrss.style.display = "none";
-        Replay.style.display = "block";
-      
-
+       endquiz();
       }
       feedback.innerHTML = "";
       
@@ -156,6 +155,13 @@
       
     }
     
+    function endOfQuiz(){
+    question.innerHTML = "Quiz completed, " +  userName.value + ", You got " + points + " Out of " + questionsArray.length;
+        progrss.style.display = "none";
+        Replay.style.display = "block";
+    }
+        
+      
 
 
 
