@@ -2,32 +2,144 @@
 <html>
 <head>
 <style>
-  .quizbox {
-    text-align: center;
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 10%;
-  }
+
+
+body {
+  background: linear-gradient(-45deg, #000000, #000000, #ff9d00, #000000);
+background-size: 400% 400%;
+animation: backgorundGradient 50s ease infinite;
+
+            
+            margin: 0;
+            padding: 0;
+            margin-top: 15%;
+            text-align: center;
+       
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+            
+        }
+
+        .QuizContent {
+          align-self: center;
+          background-color: #fff; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            height: 50vh;
+            padding-bottom: 2%;
+            margin: auto;
+            padding: 3%;
+        }
+
+          
+  @keyframes backgorundGradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+        
+
+        #userName{
+        background-color: hsl(34, 100%, 90%);
+         border: #ff8800;
+         box-shadow: 2%;
+         height: 5vh;
+         width: 30vh;
+         border-radius: 5px;
+         font-size: 20px;
+         margin-bottom: 25%;
+         margin-top: 5%;
+         
+
+        }
+        ::placeholder{
+          color: #000000;
+        }
+        #quizbtn {
+       
+    background-color:  #f0891a;;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#quizbtn:hover {
+    background-color: hsl(56, 100%, 50%);
+}
+.text{
+  color: #000000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 10px;
+  margin-top: 3%;
+  padding-top: 1%;
+  margin-bottom: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 20px;
+  
+
+}
+.title{          margin-top: 3%;
+            text-align: center;
+           margin-bottom: 2%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+
+}
+#levelBox button{
+background-color: #eaab63;
+color: #fff;
+height: 8vh;
+width: 20vh;
+border-radius: 35px;
+margin-top: 5%;
+padding-right: 2%;
+border: #ff8800; 
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 20px;
+
+}
+#levelBox button:hover {
+    background-color: hsl(56, 100%, 50%);
+    color: #000000;
+}
+
+
   
 </style>
 </head>
 <body>
-  <div>
-  <h1 id="welcomeMessage"></h1>
+  <div class = "QuizContent">
+
+  
   <div class="Nameinputbox">
-    <h1>Please enter your name to begin</h1>
-    <input id="userName">
-    <button onclick="getValidatedName()">Proceed to Maui and the Sun Quiz</button>
+    <h1 class = title> Welcome To The Quiz</h1>
+ <p class = text>Nau mai ki te patapatai mo te reo Maori, with a special focus on the Maui and the Sun myth. The quiz comprises three levels of increasing difficulty, designed to test your knowledge of the Maori language and culture. </p> 
+ <h1 class= welcometext >Please enter your name to begin <br>
+      <input type="text" placeholder="Enter Name Here" id="userName">
+
+    <button id="quizbtn" onclick="getValidatedName()">Start Quiz</button>
   </div>
   
 
 
   <div id="levelBox" style="display: none;" >
+    <h1 id="welcomeMessage"></h1>
     <h1>What level do you want to do? Please click the buttons below</h1>
   
-      <button class="easyLevelButton" onclick="easyLevel()">Easy</button>
-      <button class="mediumLevelButton" onclick="mediumLevel()">Medium</button>
-      <button class="hardLevelButton" onclick="hardLevel()">Hard</button>
+      <button  onclick="easyLevel()">Easy</button>
+      <button onclick="mediumLevel()">Medium</button>
+      <button onclick="hardLevel()">Hard</button>
   </div>
 
 
@@ -52,6 +164,7 @@
 
   <a href="home.html"> Click here to go home</a>
   <Button onclick="loadMenu()">Go to level menu</Button>
+</div>
 </div>
 
   <script>
