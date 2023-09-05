@@ -80,7 +80,7 @@ transition: 1s;
 
 
 
-#FindOutbtn a {
+#FindOutbt {
 display: inline-block;
 padding: 10px 20px;
 margin-top: 5%;
@@ -92,7 +92,7 @@ font-weight: bold;
 border: 2px solid white; 
 background-color: transparent; 
 border-radius: 2px;
-animation: shake 5s infinite;
+
 
 }
 
@@ -107,7 +107,7 @@ transform: translateX(-5px);
 transform: translateX(5px);
 }
 }
-#FindOutbtn a:hover {
+#FindOutbt a:hover {
 background-color: white;
 color: black;}
 
