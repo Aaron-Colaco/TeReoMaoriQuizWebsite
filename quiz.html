@@ -11,9 +11,13 @@ body {
             text-align: center;      
             height: 100vh;
             overflow: hidden;
-          
+            background-color: rgb(255, 255, 255);
+      
+
+}
+
             
-        }
+        
 
         .QuizContent {
           align-self: center;
@@ -24,6 +28,7 @@ body {
             padding-bottom: 2%;
             margin: auto;
             padding: 3%;
+            background-color: #fff;
         }
 
           
@@ -59,13 +64,16 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-left: 1%;
+    
 }
 
 
 #quizbtn:hover {
-    background-color: hsl(56, 100%, 50%);
-   
+  background-color: hsl(19, 100%, 47%);
+    color: #ffffff;
 }
+   
+
 .text{
   color: #000000;
   font-family: sans-serif;
@@ -107,7 +115,7 @@ font-size: 20px;
 
 }
 #levelBox button:hover {
-    background-color: hsl(56, 100%, 50%);
+    background-color: hsl(19, 100%, 47%);
     color: #000000;
 }
 .welcometext, #welcomeMessage{
@@ -118,14 +126,31 @@ font-size: 20px;
 
 .optionButtons {
 
-  width: 100%
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  
 }
 .optionButtons button {
+  background-color:  #ff8400;
+  font-family: sans-serif;
+  font-size: 20px;
+  font: white;
   width: 35%;
-  height: 7vh;
-  border-radius: 20px;
+  height: 8vh;
+  border-radius: 30px;
   margin: 2%;
+
+  
 }
+.optionButtons button:hover{
+  background-color: hsl(19, 100%, 47%);
+    color: #ffffff;
+}
+#quizBox h1, #quizBox h3{
+ font-family: sans-serif;
+}
+
 
   
 </style>
@@ -156,7 +181,8 @@ font-size: 20px;
 
 
     <div id="quizBox" style="display: none;">
-      <h1 id="progresss">progrss Question 0/0</h1>
+  
+    <h3 id="progresss">progrss Question 0/0</h3>
     <h1 id="question">Here goes the question</h1>
     <div class ="optionButtons">
     <button id="option1" onclick="checkAnswer(1)">Option 1</button>
@@ -164,9 +190,10 @@ font-size: 20px;
     <button id="option3" onclick="checkAnswer(3)">Option 3</button>
     <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
   </div>
-    <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
+  
     <h1 id="feedback"></h1>
     <p>Score: <span id="score">0</span></p>
+      <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
    
 
   </div>
@@ -189,7 +216,7 @@ font-size: 20px;
     let option2 = document.querySelector("#option2");
     let option3 = document.querySelector("#option3");
     let option4 = document.querySelector("#option4");
-    
+    let QuizContent =document.querySelector(".QuizContent")
     
     let feedback = document.querySelector("#feedback");
     let score = document.querySelector("#score");
@@ -253,15 +280,21 @@ font-size: 20px;
         points++;
         score.innerHTML = points;
         feedback.innerHTML = "Correct!";
+        feedback.style.color = "green";
+        QuizContent.style.boxShadow = "0 0 15px #00FF00";
+        
   
       
       } else {
-         feedback.innerHTML = "Incorrect! The correct answer is " + optionsArray[i][(correctAnswer - 1)];
+         feedback.innerHTML = " Your answer waas Incorrect! The correct answer was: " + optionsArray[i][(correctAnswer - 1)];
+         feedback.style.color = "red";
+         QuizContent.style.boxShadow = "0 0 15px #FF0000";
       }
     
     }
 
     function nextQuestion() {
+      QuizContent.style.boxShadow = "";
       i++;
      nextButton.style.display = "none";
       if (i < questionsArray.length) {
@@ -331,7 +364,7 @@ font-size: 20px;
       const mOptions = [
         ["a weapon", "his hands", "flax ropes", "his voice"],
         ["yellow", "blue", "red", "white"],
-        ["to keep it warm", "to make it brighter", "to slow down its movement", "to stop it from setting"]
+        ["to keep it warm", "to make it brighter", "slow down its movement", "to stop it from setting"]
       ];
 
       Quiz(mQuestions, mOptions, mAnswers);
