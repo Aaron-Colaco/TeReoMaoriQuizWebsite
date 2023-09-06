@@ -1,396 +1,430 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
 
 
-body {
-            margin: 0;
-            padding: 0;
-            margin-top: 12%;
-            text-align: center;      
-            height: 100vh;
-            overflow: hidden;
-            background-color: rgb(255, 255, 255);
-            
-
-}
-
-            
-        
-
-        .QuizContent {
-          align-self: center;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            width: 50%;
-            height: 50vh;
-            padding-bottom: 2%;
-            margin: auto;
-            padding: 3%;
-            background-color: #fff;
-        }
-
-          
-
-        
-
-        #userName{
-        background-color: hsl(34, 100%, 90%);
-         border: #ff8800;
-         box-shadow: 2%;
-         height: 5vh;
-         width: 30vh;
-         border-radius: 5px;
-         font-size: 20px;
-         margin-bottom: 25%;
-         margin-top: 5%;
-         font-family: sans-serif;
-        
-        }
-        
-        
-        ::placeholder{
-          color: #000000;
-          opacity: 50%;
-        }
-        #quizbtn, #nextButton{
-       
-    background-color:  #f0891a;
-    color: #000000;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 1%;
-    
-}
+    }
 
 
-#quizbtn:hover {
-  background-color: hsl(19, 100%, 47%);
-    color: #ffffff;
-}
+
+
+    .QuizContent {
    
-
-.text{
-  color: #000000;
-  font-family: sans-serif;
-  padding-bottom: 10px;
-  padding-top: 3%;
-  margin-bottom: 10%;
-  padding-right: 5%;
-  padding-left: 5%;
-  font-size: 20px;
-  
-
-}
-.title{        
-    margin-top: 3%;
-            text-align: center;
-           margin-bottom: 2%;
-            font-family: Impact, sans-serif;
-        
-
-}
-.insturctions{
-  font-family: sans-serif;
-  font-size: 20px;
-  color: #000000;
-  
-}
-#levelBox button{
-       
-  background-color:  #f0891a;
-color: #fff;
-height: 8vh;
-width: 20vh;
-border-radius: 35px;
-margin-top: 5%;
-padding-right: 2%;
-border: #ff8800; 
-font-family: sans-serif;
-font-size: 20px;
-
-}
-#levelBox button:hover {
-    background-color: hsl(19, 100%, 47%);
-    color: #000000;
-}
-.welcometext, #welcomeMessage{
-  padding-bottom: 5%;
-  font-family: Impact, sans-serif;
-}
+      align-self: center;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 50%;
+      height: 50vh;
+      padding-bottom: 2%;
+      margin: auto;
+      padding: 3%;
+      background-color: #fff;
+    }
 
 
-.optionButtons {
-
-  width: 100%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  
-}
-.optionButtons button{
-  background-color:  #ff8400;
-  font-family: sans-serif;
-  font-size: 20px;
-  font: white;
-  width: 35%;
-  height: 8vh;
-  border-radius: 30px;
-  margin: 2%;
-
-  
-}
-.optionButtons button:hover, #nextButton:hover{
-  background-color: hsl(19, 100%, 47%);
-    color: #ffffff;
-}
-#quizBox h1, #quizBox h3, #score{
- font-family: sans-serif;
-}
-.scoreText{
-  font-size: 30px;
-}
-#nextButton{
-  border-radius: 10px;
-  font-size: 20px;
-  padding: 0;
-  height: 7vh;
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
-  text-align: center;
-  margin-top: 10%;
-
-  
-}
 
 
-  
-</style>
+
+    #userName {
+      background-color: hsl(34, 100%, 90%);
+      border: #ff8800;
+      box-shadow: 2%;
+      height: 5vh;
+      width: 30vh;
+      border-radius: 5px;
+      font-size: 20px;
+      margin-bottom: 25%;
+      margin-top: 5%;
+      font-family: sans-serif;
+
+    }
+
+
+    ::placeholder {
+      color: #000000;
+      opacity: 50%;
+    }
+
+    #quizbtn,
+    #nextButton {
+
+      background-color: #f0891a;
+      color: #000000;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 1%;
+
+    }
+
+
+    #quizbtn:hover {
+      background-color: hsl(19, 100%, 47%);
+      color: #ffffff;
+    }
+
+
+    .text {
+      color: #000000;
+      font-family: sans-serif;
+      padding-bottom: 10px;
+      padding-top: 3%;
+      margin-bottom: 10%;
+      padding-right: 5%;
+      padding-left: 5%;
+      font-size: 20px;
+
+
+    }
+
+    .title {
+      margin-top: 3%;
+      text-align: center;
+      margin-bottom: 2%;
+      font-family: Impact, sans-serif;
+
+
+    }
+
+    .insturctions {
+      font-family: sans-serif;
+      font-size: 20px;
+      color: #000000;
+
+    }
+
+    #levelBox button {
+
+      background-color: #f0891a;
+      color: #fff;
+      height: 8vh;
+      width: 20vh;
+      border-radius: 35px;
+      margin-top: 5%;
+      padding-right: 2%;
+      border: #ff8800;
+      font-family: sans-serif;
+      font-size: 20px;
+
+    }
+
+    #levelBox button:hover {
+      background-color: hsl(19, 100%, 47%);
+      color: #000000;
+    }
+
+    .welcometext,
+    #welcomeMessage {
+      padding-bottom: 5%;
+      font-family: Impact, sans-serif;
+    }
+
+
+    .optionButtons {
+
+      width: 100%;
+      margin-bottom: 5%;
+      margin-top: 5%;
+
+    }
+
+    .optionButtons button {
+      background-color: #ff8400;
+      font-family: sans-serif;
+      font-size: 20px;
+      font: white;
+      width: 35%;
+      height: 8vh;
+      border-radius: 30px;
+      margin: 2%;
+
+
+    }
+
+    .optionButtons button:hover,
+    #nextButton:hover {
+      background-color: hsl(19, 100%, 47%);
+      color: #ffffff;
+    }
+
+    #quizBox h1,
+    #quizBox h3,
+    #score {
+      font-family: sans-serif;
+    }
+
+    .scoreText {
+      font-size: 30px;
+    }
+
+    #nextButton {
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 0;
+      height: 7vh;
+      width: 30%;
+      margin-left: 35%;
+      margin-right: 35%;
+      text-align: center;
+      margin-top: 10%;
+
+
+    }
+  </style>
 </head>
+
 <body>
-  <div class = "QuizContent">
-
-  
-  <div class="Nameinputbox">
-    <h1 class = title> Welcome To The Quiz</h1>
- <p class = text>Nau mai ki te patapatai mo te reo Maori, with a special focus on the Maui and the Sun myth. The quiz comprises three levels of increasing difficulty, designed to test your knowledge of the Maori language and culture. </p> 
- <h1 class= welcometext >Please enter your name to begin <br>
-      <input type="text" placeholder="Enter Name Here" id="userName">
-
-    <button id="quizbtn" onclick="getValidatedName()">Start Quiz</button>
-  </div>
-  
+  <div class="QuizContent">
 
 
-  <div id="levelBox" style="display: none;" >
-    <h1 id="welcomeMessage"></h1>
-    <h1 class = "insturctions">What level do you want to do? Please click the buttons below</h1>
-  
-      <button  onclick="easyLevel()">Easy</button>
+    <div class="Nameinputbox">
+      <h1 class=title> Welcome To The Quiz</h1>
+      <p class=text>Nau mai ki te patapatai mo te reo Maori, with a special focus on the Maui and the Sun myth. The quiz
+        comprises three levels of increasing difficulty, designed to test your knowledge of the Maori language and
+        culture. </p>
+      <h1 class=welcometext>Please enter your name to begin <br>
+        <input type="text" placeholder="Enter Name Here" id="userName">
+
+        <button id="quizbtn" onclick="getValidatedName()">Start Quiz</button>
+    </div>
+
+
+
+    <div id="levelBox" style="display: none;">
+      <h1 id="welcomeMessage"></h1>
+      <h1 class="insturctions">What level do you want to do? Please click the buttons below</h1>
+
+      <button onclick="easyLevel()">Easy</button>
       <button onclick="mediumLevel()">Medium</button>
       <button onclick="hardLevel()">Hard</button>
-  </div>
+    </div>
 
 
     <div id="quizBox" style="display: none;">
-  
-    <h3 id="progresss">progrss Question 0/0</h3>
-    <h1 id="question">Here goes the question</h1>
-    <div class ="optionButtons">
-    <button id="option1" onclick="checkAnswer(1)">Option 1</button>
-    <button id="option2"  onclick="checkAnswer(2)">Option 2</button>
-    <button id="option3" onclick="checkAnswer(3)">Option 3</button>
-    <button id="option4"  onclick="checkAnswer(4)">Option 4</button>
-  </div>
-  
-    <h1 id="feedback"></h1>
-    <div class = "scoreText">
-    <p>Score: <span id="score">0</span></p>
-      <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
-   
 
-  </div>
-  <div id="replayMenu" style="display: none;"> 
+      <h3 id="progresss">progrss Question 0/0</h3>
+      <h1 id="question">Here goes the question</h1>
+      <div class="optionButtons">
+        <button id="option1" onclick="checkAnswer(1)">Option 1</button>
+        <button id="option2" onclick="checkAnswer(2)">Option 2</button>
+        <button id="option3" onclick="checkAnswer(3)">Option 3</button>
+        <button id="option4" onclick="checkAnswer(4)">Option 4</button>
+      </div>
 
-  <h4>Would you like to go home or Replay the quiz</h4>
+      <h1 id="feedback"></h1>
+      <div class="scoreText">
+        <p>Score: <span id="score">0</span></p>
+        <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
+      </div>
+
+      </div>
+      <div id="replayMenu" style="display: none;">
+
+        <h1 id = "FinalScoreMessage"></h1>
+        <div id = "percentage">0</div>
+        <h4>Would you like to go home or Replay the quiz</h4>
 
 
-  <a href="home.html"> Click here to go home</a>
-  <Button onclick="loadMenu()">Go to level menu</Button>
-</div>
-</div>
+        <a href="home.html"> Click here to go home</a>
+        <Button onclick="loadMenu()">Go to level menu</Button>
+      </div>
+ 
 
-  <script>
-    let userName = document.querySelector("#userName");
-    let welcomeMessage = document.querySelector("#welcomeMessage");
-    let nameInputBox = document.querySelector(".Nameinputbox");
-    let question = document.querySelector("#question");
-    let option1 = document.querySelector("#option1");
-    let option2 = document.querySelector("#option2");
-    let option3 = document.querySelector("#option3");
-    let option4 = document.querySelector("#option4");
-    let QuizContent =document.querySelector(".QuizContent")
-    
-    let feedback = document.querySelector("#feedback");
-    let score = document.querySelector("#score");
-    let progrss = document.querySelector("#progresss");
-    let levelBox = document.querySelector("#levelBox");
-    let nextButton = document.querySelector("#nextButton")
-    let optionsButtons = document.querySelector(".optionButtons")
-    let quizbox = document.querySelector("#quizBox")
-    let Replay = document.querySelector("#replayMenu")
-    let prcentage = 0;
+    <script>
+      let userName = document.querySelector("#userName");
+      let welcomeMessage = document.querySelector("#welcomeMessage");
+      let nameInputBox = document.querySelector(".Nameinputbox");
+      let question = document.querySelector("#question");
+      let option1 = document.querySelector("#option1");
+      let option2 = document.querySelector("#option2");
+      let option3 = document.querySelector("#option3");
+      let option4 = document.querySelector("#option4");
+      let QuizContent = document.querySelector(".QuizContent")
 
-  
-    let i = 0;
-    let questionsArray = [];
-    let optionsArray = [];
-    let answersArray = [];
-    let points = 0;
-
-    function getValidatedName() {
+      let feedback = document.querySelector("#feedback");
+      let score = document.querySelector("#score");
+      let progrss = document.querySelector("#progresss");
+      let levelBox = document.querySelector("#levelBox");
+      let nextButton = document.querySelector("#nextButton")
+      let optionsButtons = document.querySelector(".optionButtons")
+      let quizbox = document.querySelector("#quizBox")
+      let Replay = document.querySelector("#replayMenu")
       
-      if (userName.value.length < 1 || userName.value.length > 30) {
-        alert("Please enter a name between 1-30 characters to begin");
-      } else {
-        welcomeMessage.innerHTML = "Welcome " + userName.value + ", to this Maui and the Sun Maori Quiz";
-        nameInputBox.style.display = "none";
-        levelBox.style.display = "block";
+      let FinalScoreMessage = document.querySelector("#FinalScoreMessage")
+      let percentage = 0;
+      let percentagetext = document.querySelector("#percentage");
+
+
+      let i = 0;
+      let questionsArray = [];
+      let optionsArray = [];
+      let answersArray = [];
+      var points = 0;
+
+      function getValidatedName() {
+
+        if (userName.value.length < 1 || userName.value.length > 30) {
+          alert("Please enter a name between 1-30 characters to begin");
+        } else {
+          welcomeMessage.innerHTML = "Welcome " + userName.value + ", to this Maui and the Sun Maori Quiz";
+          nameInputBox.style.display = "none";
+          levelBox.style.display = "block";
+        }
       }
-    }
-    
-    function Quiz(qArray, oArray, aArray) {
-     
-      quizbox.style.display ="block";
-      questionsArray = qArray;
-      optionsArray = oArray;
-      answersArray = aArray;
-      displayQuestion();
-      levelBox.style.display = "none";
-    
-    
-    }
-    function displayQuestion() {
-     
-      question.innerHTML = questionsArray[i];
-      option1.innerHTML = optionsArray[i][0];
-      option2.innerHTML = optionsArray[i][1];
-      option3.innerHTML = optionsArray[i][2];
-      option4.innerHTML = optionsArray[i][3];
-      
-      progresss.innerHTML = "Question " +(i + 1) + " out of " + questionsArray.length;
-      nextButton.style.display = "none";
-      optionsButtons.style.display="block";
-    }  
-    
-    function checkAnswer(selectedOption) {
-      nextButton.style.display = "block";
-      optionsButtons.style.display = "none";
-  
-      const userChoice = selectedOption;
-      const correctAnswer = answersArray[i];
-      if (userChoice == correctAnswer) {
-        points++;
-        score.innerHTML = points;
-        feedback.innerHTML = "Correct!";
-        feedback.style.color = "green";
-        QuizContent.style.boxShadow = "0 0 15px #00FF00";
-        
-  
-      
-      } else {
-         feedback.innerHTML = " Your answer waas Incorrect! The correct answer was: " + optionsArray[i][(correctAnswer - 1)];
-         feedback.style.color = "red";
-         QuizContent.style.boxShadow = "0 0 15px #FF0000";
-      }
-    
-    }
 
-    function nextQuestion() {
-      QuizContent.style.boxShadow = "";
-      i++;
-     nextButton.style.display = "none";
-      if (i < questionsArray.length) {
-        
+      function Quiz(qArray, oArray, aArray) {
+        quizbox.style.display = "block";
+        questionsArray = qArray;
+        optionsArray = oArray;
+        answersArray = aArray;
         displayQuestion();
-   
-      } else {
-       endquiz();
-      }
-      feedback.innerHTML = "";
-      
-    }
+        levelBox.style.display = "none";
 
-    function loadMenu(){
-      welcomeMessage.innerHTML = "Welcome Back " + userName.value;
-      levelBox.style.display = "block";
-      
-    }
-    
-    function endOfQuiz(){
-    question.innerHTML = "Quiz completed, " +  userName.value + ", You got " + points + " Out of " + questionsArray.length;
+
+      }
+      function displayQuestion() {
+
+        question.innerHTML = questionsArray[i];
+        option1.innerHTML = optionsArray[i][0];
+        option2.innerHTML = optionsArray[i][1];
+        option3.innerHTML = optionsArray[i][2];
+        option4.innerHTML = optionsArray[i][3];
+
+        progresss.innerHTML = "Question " + (i + 1) + " out of " + questionsArray.length;
+        nextButton.style.display = "none";
+        optionsButtons.style.display = "block";
+      }
+
+      function checkAnswer(selectedOption) {
+        nextButton.style.display = "block";
+        optionsButtons.style.display = "none";
+
+        const userChoice = selectedOption;
+        const correctAnswer = answersArray[i];
+        if (userChoice == correctAnswer) {
+          points++;
+          score.innerHTML = points;
+          feedback.innerHTML = "Correct!";
+          feedback.style.color = "green";
+          QuizContent.style.boxShadow = "0 0 15px #00FF00";
+
+
+        } else {
+          feedback.innerHTML = " Your answer waas Incorrect! The correct answer was: " + optionsArray[i][(correctAnswer - 1)];
+          feedback.style.color = "red";
+          QuizContent.style.boxShadow = "0 0 15px #FF0000";
+        }
+
+      }
+
+      function nextQuestion() {
+        QuizContent.style.boxShadow = "";
+        i++;
+        nextButton.style.display = "none";
+        if (i < questionsArray.length) {
+
+          displayQuestion();
+
+        } else {
+          endOfQuiz();
+        }
+        feedback.innerHTML = "";
+
+      }
+
+      function endOfQuiz() {
+
+        FinalScoreMessage.innerHTML = "Quiz completed, " + userName.value + " You got " + points + " Out of " + questionsArray.length;
+        percentage = Math.round((points / answersArray.length) * 100);
+        console.log(percentage)
+        percentagetext.innerHTML = percentage + "%";
+        quizbox.style.display ="none";
         progrss.style.display = "none";
         Replay.style.display = "block";
-    }
+
+      }
+    
+      function loadMenu() {
         
+     
+        levelBox.style.display = "block";
+        welcomeMessage.innerHTML = "Welcome Back " + userName.value;
+        progrss.style.display = "block";
+        quizbox.style.display = "blcok";
+        Replay.style.display = "none";
+        points = 0;
+        score.innerHTML = points;
+        i = 0;
+        
+      }
+     
+
+
+
+
+
+      function easyLevel() {
       
+        const easyQuestions = [
+          "What did Maui use to capture the sun?",
+          "What color is the sun?",
+          "Why did Maui capture the sun?"
+        ];
 
+        const easyAnswers = [
+          3,
+          4,
+          4
+        ];
 
+        const easyOptions = [
+          ["a weapon", "his hands", "flax ropes", "his voice"],
+          ["Kakariki", "hh", "green", "white"],
+          ["to keep it warm", "to make it brighter", "to slow down its movement", "All of the Above"]
+        ];
 
-    function easyLevel() {
-      
-      
-      const easyQuestions = [
-        "What did Maui use to capture the sun?",
-        "What color is the sun?",
-        "Why did Maui capture the sun?"
-      ];
+        Quiz(easyQuestions, easyOptions, easyAnswers);
+      }
 
-      const easyAnswers = [
-        3,
-        4,
-        4
-      ];
+      function mediumLevel() {
+        const mQuestions = [
+          "What did Maui use tob ggggv capture the sun?",
+          "What color was the sun?",
+          "Why did Maui capture the sun?"
+        ];
 
-      const easyOptions = [
-        ["a weapon", "his hands", "flax ropes", "his voice"],
-        ["Kakariki", "hh", "green", "white"],
-        ["to keep it warm", "to make it brighter", "to slow down its movement", "All of the Above"]
-      ];
+        const mAnswers = [
+          1,
+          0,
+          3
+        ];
 
-      Quiz(easyQuestions, easyOptions, easyAnswers);
-    }
+        const mOptions = [
+          ["a weapon", "his hands", "flax ropes", "his voice"],
+          ["yellow", "blue", "red", "white"],
+          ["to keep it warm", "to make it brighter", "slow down its movement", "to stop it from setting"]
+        ];
 
-    function mediumLevel() {
-      const mQuestions = [
-        "What did Maui use tob ggggv capture the sun?",
-        "What color was the sun?",
-        "Why did Maui capture the sun?"
-      ];
+        Quiz(mQuestions, mOptions, mAnswers);
+      }
 
-      const mAnswers = [
-        1,
-        0,
-        3
-      ];
-
-      const mOptions = [
-        ["a weapon", "his hands", "flax ropes", "his voice"],
-        ["yellow", "blue", "red", "white"],
-        ["to keep it warm", "to make it brighter", "slow down its movement", "to stop it from setting"]
-      ];
-
-      Quiz(mQuestions, mOptions, mAnswers);
-    }
-
-    function hardLevel() {
-      alert("You picked hard level");
-    }
-  </script>
+      function hardLevel() {
+        alert("You picked hard level");
+      }
+    </script>
 </body>
-</html>
 
+</html>
