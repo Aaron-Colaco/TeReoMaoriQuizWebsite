@@ -31,7 +31,7 @@
         culture. </p>
       <h1 class=welcomeText>Please enter your name to begin <br>
         <input type="text" placeholder="Enter Name Here" id="userName">
-        <button id="quizButton" onclick="getValidatedName()">Start Quiz</button>
+        <button id="startQuizButton" onclick="getValidatedName()">Start Quiz</button>
     </div>
 
 
@@ -68,8 +68,8 @@
         <div id = "percentage">0</div>
         <div id = "personlizedMessage">Quiz messgae</div>
         <h4  id = "redoText">Would you like to go home or go to the level menu</h4>
-        <button class="redoButtons"><a href="home.html"> Go Home</a></button>
-        <Button class="redoButtons" onclick="loadMenu()">Go To Level Menu</Button>
+        <button class="homeButton"><a href="home.html"> Go Home</a></button>
+        <Button class="redoButton" onclick="loadMenu()">Go To Level Menu</Button>
       </div>
     
       <script src="quizScript.js"></script>

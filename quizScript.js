@@ -7,7 +7,6 @@
       let option3 = document.querySelector("#option3");
       let option4 = document.querySelector("#option4");
       let quizContent = document.querySelector(".quizContent")
-
       let feedback = document.querySelector("#feedback");
       let score = document.querySelector("#score");
       let progrss = document.querySelector("#progresss");
@@ -15,13 +14,11 @@
       let nextButton = document.querySelector("#nextButton")
       let optionsButtons = document.querySelector(".optionButtons")
       let quizbox = document.querySelector("#quizBox")
-      let replay = document.querySelector("#replayMenu")
-      
+      let replay = document.querySelector("#replayMenu")  
       let finalScoreMessage = document.querySelector("#finalScoreMessage")
       let percentage = 0;
       let percentageText = document.querySelector("#percentage");
       let personalizedMessage =document.querySelector("#personlizedMessage");
-
 
       let i = 0;
       let questionsArray = [];
@@ -115,15 +112,17 @@
 
  if (percentage > 30) {
   personalizedMessage.innerHTML = userName.value + " that's a good score. Have another go; you are only " + (questionsArray.length - points) + " correct answer(s) away  away from a perfect score. Consider doing some research about the Maori culture or check out the 'About' section to learn more.";
-    
+    personalizedMessage.style.color ="green"
 }
 
 if (percentage === 100) {
   personalizedMessage.innerHTML = userName.value + " that's a perfect score. Tino Pai";
+  personalizedMessage.style.color ="green"
 }
 
 if (percentage <= 30) {
   personalizedMessage.innerHTML = userName.value + " Good attempt; however, you can do better. Consider checking out the 'About' page or doing some more research about Maori Culture.";
+  personalizedMessage.style.color ="red"
 }
  
 

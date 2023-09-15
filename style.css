@@ -2,6 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;  
+ background-color: #000000;
+    min-height: 100%;
 }
 
 .home{
@@ -98,7 +100,7 @@ border-radius: 2px;
 
 }
 
-#FindOutboutton a:hover {
+#findOutboutton a:hover {
 background-color: white;
 color: black;}
 
@@ -106,6 +108,7 @@ color: black;}
 margin-left: 50%;
 width: 15%;
 height: 7vh;
+overflow: hidden;
 }
 
 /*style for about page */
@@ -122,20 +125,17 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #fb6226;
+  background: #ff6200;
 }
-
- 
-
-  
   section {
     width: 100%;
     height: 100vh;
+    overflow: auto;
   }
   #main, #darkDays, #sunCapture,#mauiToday {
     background-color: rgb(0, 0, 0);
   }
-     .content{
+   .content{
     max-width: 1200px;
     margin: 0 auto;
     padding: 9px;
@@ -167,7 +167,7 @@ overflow: hidden;}
 
 .img-box img {
 max-width: 100%;
-max-height: 100%;
+max-height: 100vh;
 transition: transform 0.3s ease;
 }
   .img-box:hover img {
@@ -181,7 +181,7 @@ transition: transform 0.3s ease;
     padding-bottom: 0%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin-top: 0; 
+    margin-top: 3%; 
     margin-bottom: 0%;
     text-align: center;
     
@@ -260,6 +260,7 @@ transition: transform 0.3s ease;
   margin: auto;
   padding: 3%;
   background-color: #fff;
+  overflow: auto;
 }
 
 
@@ -286,10 +287,10 @@ transition: transform 0.3s ease;
   opacity: 50%;
 }
 
-#quizButton,
+#startQuizButton,
 #nextButton
 {
-  background-color: #f0891a;
+  background-color: #ff8800;
   color: #000000;
   border: none;
   border-radius: 20px;
@@ -297,8 +298,9 @@ transition: transform 0.3s ease;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: 1%;
+  
 }
-#quizbtn:hover {
+#startQuizButton:hover {
   background-color: hsl(19, 100%, 47%);
   color: #ffffff;
 }
@@ -331,7 +333,7 @@ transition: transform 0.3s ease;
 
 #levelBox button {
 
-  background-color: #f0891a;
+  background-color: #ff8800;
   color: #fff;
   height: 8vh;
   width: 20vh;
@@ -366,7 +368,7 @@ transition: transform 0.3s ease;
 }
 
 .optionButtons button {
-  background-color: #ff8400;
+  background-color: #ff8800;
   font-family: sans-serif;
   font-size: 20px;
   font: white;
@@ -374,10 +376,11 @@ transition: transform 0.3s ease;
   height: 8vh;
   border-radius: 30px;
   margin: 2%;
+  border-color: #ff8800;
 }
 
 .optionButtons button:hover,
-#nextButton:hover,.redoButtons:hover {
+#nextButton:hover,.redoButton:hover,.homeButton:hover {
   background-color: hsl(19, 100%, 47%);
   color: #ffffff;
 }
@@ -420,11 +423,11 @@ transition: transform 0.3s ease;
   font-family: sans-serif;
   padding: 3%;
 }
-.redoButtons, .redoButtons a{
- 
-height: 5vh; 
+
+.redoButton, .redoButtons a,.homeButton{
+ height: 5vh; 
 width: 20%;
-  background-color: #f0891a;
+  background-color: #ff8800;
   color: #000000;
   text-decoration: none;
   padding-bottom: 2%;
@@ -433,6 +436,9 @@ width: 20%;
   border-radius: 25px;
   text-align: center;
   align-items: center;
+}
+.homeButton a{
+text-decoration: none;
 }
 #redoText{
   font-family: sans-serif;
