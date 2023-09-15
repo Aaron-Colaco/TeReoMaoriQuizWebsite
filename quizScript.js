@@ -74,13 +74,13 @@
           score.innerHTML = points;
           feedback.innerHTML = "Correct!";
           feedback.style.color = "green";
-          QuizContent.style.boxShadow = "0 0 15px #00FF00";
+          QuizContent.style.boxShadow = "0 0 50px #00FF00";
 
 
         } else {
           feedback.innerHTML = " Your answer waas Incorrect! The correct answer was: " + optionsArray[i][(correctAnswer - 1)];
           feedback.style.color = "red";
-          QuizContent.style.boxShadow = "0 0 15px #FF0000";
+          QuizContent.style.boxShadow = "0 0 50px #FF0000";
         }
 
       }
@@ -119,8 +119,6 @@
 
 if (percentage === 100) {
   personalizedMessage.innerHTML = userName.value + " that's a perfect score. Tino Pai";
-  QuizContent.style.boxShadow = "0 0 15px #00FF00";
-
 }
 
 if (percentage <= 30) {
@@ -155,7 +153,12 @@ if (percentage <= 30) {
           "What did Maui use to capture the sun?",
           "What color is the sun?",
           "Why did Maui capture the sun?",
-           "Maui is a _ _ _ _ _ _ _."
+           "Maui is a _ _ _ _ _ _ _.",
+           "Maui and the Sun is Myth, that came from?",
+           "What culture to do think Maui was from?",
+           "Did Maui harm the sun?"
+
+
 
         ];
 
@@ -163,7 +166,11 @@ if (percentage <= 30) {
           3,
           2,
           4,
+          2,
+          1,
+          1,
           2
+
         ];
 
         const easyOptions = [
@@ -171,6 +178,10 @@ if (percentage <= 30) {
           ["Kakariki", "Ma", "Whero", " kikorangi"],
           ["to keep it warm", "to make it brighter", "to slow it down", "All of the Above"],
           ["God", "Demi God", "King", "All of the Above"],
+          ["New Zealand", "USA", "England", "Spain"],
+          ["Maori", "British", "Indian", "Spainish"],
+          ["Yes", "no", "maybe", "Dont know"]
+
 
 
         ];
@@ -180,9 +191,14 @@ if (percentage <= 30) {
 
       function mediumLevel() {
         const mQuestions = [
-          "What did Maui use tob ggggv capture the sun?",
-          "What color was the sun?",
-          "Why did Maui capture the sun?"
+          "What is one message Maui teachs us?",
+          "What color is the sun?",
+          "Why did Maui capture the sun?",
+           "Maui is a _ _ _ _ _ _ _.",
+           "Maui and the Sun is Myth, that came from?",
+           "What culture to do think Maui was from?",
+           "Did Maui harm the sun?"
+
         ];
 
         const mAnswers = [
