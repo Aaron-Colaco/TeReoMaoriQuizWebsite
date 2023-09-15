@@ -1,12 +1,12 @@
       let userName = document.querySelector("#userName");
       let welcomeMessage = document.querySelector("#welcomeMessage");
-      let nameInputBox = document.querySelector(".Nameinputbox");
+      let nameInputBox = document.querySelector(".nameInputBox");
       let question = document.querySelector("#question");
       let option1 = document.querySelector("#option1");
       let option2 = document.querySelector("#option2");
       let option3 = document.querySelector("#option3");
       let option4 = document.querySelector("#option4");
-      let QuizContent = document.querySelector(".QuizContent")
+      let quizContent = document.querySelector(".quizContent")
 
       let feedback = document.querySelector("#feedback");
       let score = document.querySelector("#score");
@@ -15,11 +15,11 @@
       let nextButton = document.querySelector("#nextButton")
       let optionsButtons = document.querySelector(".optionButtons")
       let quizbox = document.querySelector("#quizBox")
-      let Replay = document.querySelector("#replayMenu")
+      let replay = document.querySelector("#replayMenu")
       
-      let FinalScoreMessage = document.querySelector("#FinalScoreMessage")
+      let finalScoreMessage = document.querySelector("#finalScoreMessage")
       let percentage = 0;
-      let percentagetext = document.querySelector("#percentage");
+      let percentageText = document.querySelector("#percentage");
       let personalizedMessage =document.querySelector("#personlizedMessage");
 
 
@@ -29,8 +29,9 @@
       let answersArray = [];
       var points = 0;
 
+      //function to Validate Name
       function getValidatedName() {
-
+      // if the user name is not vaild alert user
         if (userName.value.length < 1 || userName.value.length > 30) {
           alert("Please enter a name between 1-30 characters to begin");
         } else {
@@ -40,7 +41,7 @@
         }
       }
 
-      function Quiz(qArray, oArray, aArray) {
+      function quiz(qArray, oArray, aArray) {
         quizbox.style.display = "block";
         questionsArray = qArray;
         optionsArray = oArray;
@@ -74,19 +75,19 @@
           score.innerHTML = points;
           feedback.innerHTML = "Correct!";
           feedback.style.color = "green";
-          QuizContent.style.boxShadow = "0 0 50px #00FF00";
+          quizContent.style.boxShadow = "0 0 50px #00FF00";
 
 
         } else {
           feedback.innerHTML = " Your answer waas Incorrect! The correct answer was: " + optionsArray[i][(correctAnswer - 1)];
           feedback.style.color = "red";
-          QuizContent.style.boxShadow = "0 0 50px #FF0000";
+          quizContent.style.boxShadow = "0 0 50px #FF0000";
         }
 
       }
 
       function nextQuestion() {
-        QuizContent.style.boxShadow = "";
+        quizContent.style.boxShadow = "";
         i++;
         nextButton.style.display = "none";
         if (i < questionsArray.length) {
@@ -102,13 +103,13 @@
 
       function endOfQuiz() {
 
-        FinalScoreMessage.innerHTML = "Quiz completed " + userName.value + " ,you got " + points + " out of " + questionsArray.length;
+        finalScoreMessage.innerHTML = "Quiz completed " + userName.value + " ,you got " + points + " out of " + questionsArray.length;
         percentage = Math.round((points / answersArray.length) * 100);
         console.log(percentage)
-        percentagetext.innerHTML = percentage + "%";
-        quizbox.style.display ="none";
+        percentageText.innerHTML = percentage + "%";
+        quizBox.style.display ="none";
         progrss.style.display = "none";
-        Replay.style.display = "block";
+        replay.style.display = "block";
 
 
 
@@ -135,7 +136,7 @@ if (percentage <= 30) {
         welcomeMessage.innerHTML = "Welcome Back " + userName.value;
         progrss.style.display = "block";
         quizbox.style.display = "blcok";
-        Replay.style.display = "none";
+        replay.style.display = "none";
         points = 0;
         score.innerHTML = points;
         i = 0;
@@ -186,7 +187,7 @@ if (percentage <= 30) {
 
         ];
 
-        Quiz(easyQuestions, easyOptions, easyAnswers);
+        quiz(easyQuestions, easyOptions, easyAnswers);
       }
 
       function mediumLevel() {
@@ -213,7 +214,7 @@ if (percentage <= 30) {
           ["to keep it warm", "to make it brighter", "slow down its movement", "to stop it from setting"]
         ];
 
-        Quiz(mQuestions, mOptions, mAnswers);
+        quiz(mQuestions, mOptions, mAnswers);
       }
 
       function hardLevel() {
