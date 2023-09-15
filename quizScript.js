@@ -25,13 +25,15 @@
       let optionsArray = [];
       let answersArray = [];
       var points = 0;
+      
 
       //function to Validate Name
       function getValidatedName() {
       // if the user name is not vaild alert user
         if (userName.value.length < 1 || userName.value.length > 30) {
           alert("Please enter a name between 1-30 characters to begin");
-        } else {
+        } 
+        else {
           welcomeMessage.innerHTML = "Welcome " + userName.value + ", to this Maui and the Sun Maori Quiz";
           nameInputBox.style.display = "none";
           levelBox.style.display = "block";
@@ -157,9 +159,6 @@ if (percentage <= 30) {
            "Maui and the Sun is Myth, that came from?",
            "What culture to do think Maui was from?",
            "Did Maui harm the sun?"
-
-
-
         ];
 
         const easyAnswers = [
@@ -174,13 +173,13 @@ if (percentage <= 30) {
         ];
 
         const easyOptions = [
-          ["a weapon", "his hands", "flax ropes", "his voice"],
+          ["A weapon", "His hands", "Flax ropes", "His voice"],
           ["Kakariki", "Ma", "Whero", " kikorangi"],
-          ["to keep it warm", "to make it brighter", "to slow it down", "All of the Above"],
+          ["To keep it warm", "To make it brighter", "To slow it down", "All of the Above"],
           ["God", "Demi God", "King", "All of the Above"],
           ["New Zealand", "USA", "England", "Spain"],
           ["Maori", "British", "Indian", "Spainish"],
-          ["Yes", "no", "maybe", "Dont know"]
+          ["Yes", "No", "Maybe", "Dont know"]
 
 
 
@@ -190,32 +189,65 @@ if (percentage <= 30) {
       }
 
       function mediumLevel() {
-        const mQuestions = [
-          "What is one message Maui teachs us?",
-          "What color is the sun?",
-          "Why did Maui capture the sun?",
-           "Maui is a _ _ _ _ _ _ _.",
-           "Maui and the Sun is Myth, that came from?",
-           "What culture to do think Maui was from?",
-           "Did Maui harm the sun?"
+       const mediumQuestions = 
+    [
+       "The Story of Maui is a:",
+       "Which word best describes Maui?",
+       "Who helped Maui capture The Sun?",
+       "What is the phrase 'the sun' in Maori?",
+       "What is the Maori word for people?",
+       "What is the Maori word for land?",
+      "What is the Maori word for capture"] ;
 
+        const mediumAnswers = [
+          2,3,2,1,3,1,4
         ];
 
-        const mAnswers = [
-          1,
-          0,
-          3
+        const mediumOptions = [
+          ["Fictional tale", "Myth", "Novel", "Play"],
+          ["Scared", "Sad", "Ambitious", "Fearful"],
+          ["Nobody", "His Tribe", "The Moon", "His Wife"],
+          ["Te Rā", "Te Reo", "Te Rāe", "Te Rāee"],
+          ["Kiwis", "Iwi", "Tangata", "Keepers"],
+          ["whenua", "Ta Ra", "Hopue", "Hopu"],
+          ["Hopu", "Hopa", "Hopue", "Hopu"]
+    
         ];
 
-        const mOptions = [
-          ["a weapon", "his hands", "flax ropes", "his voice"],
-          ["yellow", "blue", "red", "white"],
-          ["to keep it warm", "to make it brighter", "slow down its movement", "to stop it from setting"]
-        ];
-
-        quiz(mQuestions, mOptions, mAnswers);
+        quiz(mediumQuestions, mediumOptions, mediumAnswers);
       }
+     
+     
+      
+
+
+
 
       function hardLevel() {
-        alert("You picked hard level");
-      }
+        const hardQuestions = [
+          "What is the Maori word for hook?",
+          "What does 'Iwi' mean?",
+          "The Maori name for New Zealand is?",
+          "What does 'Hopu' mean in English?",
+          "What does 'Tangata' mean in English?",
+          "What does 'Tangata Whenua' mean in English?",
+          "What is 'Maui' in Maori?"
+        ];
+        
+        const hardOptions = [
+          ["Matau", "Hooka", "Hatua", "Huka"],
+          ["People", "Tribe", "Team", "Fearful"],
+          ["Nothing", "Aotearoa", "Kiwi Land", "Kiwi Town"],
+          ["Hook", "Rock", "Took", "Stole"],
+          ["People", "Birds", "Cars", "House"],
+          ["People of the country", "People of the land", "People of the town", "People of the community"],
+          ["Maui", "Marui", "Mariu", "Mauui"]
+        ];
+        
+
+
+      const hardAnswers = [
+        1,2,2,1,1,2,1
+      ];
+     quiz(hardQuestions,hardOptions,hardAnswers)
+    }
