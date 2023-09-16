@@ -2,61 +2,85 @@
 <html>
 
 <head>
+   <!--meta tag to help control scaling-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Link to Style Sheet-->
   <link rel="stylesheet" href="style.css">
+   <!--Meta tags sets the characters my web page can use -->
   <meta charset="UTF-8">
   <title>About Maui And The Sun</title>
 </head>
 
 
 <body>
-
+ <!--Main Section-->
 <section id="main">
+   <!--Code for the Nav Bar-->
   <div id="navbar">
     <nav>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="quiz.html">Quiz</a>
     <img id="logo" src="Screenshot 2023-08-18 at 12.45.19 PM copy.png" alt="">
-    
+     <!--Adds the logo-->
     </nav>
- </div>
-  <div class="content">
-    <h2 class="aboutPageTitles">The Legend of Maui and the Sun</h2>
-    <div class="boxes">
-      <div class="box">
-        <h3 class="title">The Dark Days</h3>
-        <a href="#darkDays">
-          <div class="img-box">
-            <img src="thedarkdays.png" alt="Dark Days">
+  </div>
+
+  <div class="contentForMainAboutPage">     <!--div contiang all the content in the main section-->
+    <h2 class="aboutPageTitles">The Legend of Maui and the Sun</h2>        <!--Title-->
+    <div class="boxes">    <!--div that cotnians all the 3 boxes in the about page-->
+     
+
+        <!--Box 1 div with the applied the class of box-->
+      <div class="box"> 
+        <h3 class="title">The Dark Days</h3>    <!--Adds title to box 1 and adds the tile class-->
+        <a href="#darkDays">    <!--link to the darkdays section so when user clicks hte image it link to the How Maui cpatured the Sun section-->
+          <div class="imgBox">
+            <img src="thedarkdays.png" alt="Dark Days">   <!--Image of the dark days inside a div with a class called imgageBox-->
           </div>
         </a>
-        <p class="boxText">Long ago, the world was engulfed in darkness. Maui, a clever demigod, took it upon himself to bring light back to the world.</p>
+           <!--text about the dark days in a div called boxText-->
+        <p class="boxText">Long ago, the world was engulfed in darkness. Maui, a clever demigod, took it upon himself to bring light back to the world.</p>   <!--Adds the -->
       </div>
+
+
+           <!--Box 2 div with applied the class of box-->
       <div class="box">
-        <h3 class="title">How Maui Captured the Sun</h3>
-        <a href="#sunCapture">
-          <div class="img-box">
-            <img src="mauicapturingthesun.png" alt="Maui Captures the Sun">
+        <h3 class="title">How Maui Captured the Sun</h3>   <!--Adds title to box 2 and adds the tile class-->
+        <a href="#sunCapture">  <!--link to the Maui capturing the sun section so when user clicks hte image it link to the How Maui cpatured the Sun section-->
+          <div class="imgBox">
+            <img src="mauicapturingthesun.png" alt="Maui Captures the Sun"><!--Image of Maui capturing the Sun inside a div with a class called imgageBox-->
           </div>
         </a>
+               <!--text about Maui capturing the sun in a div called boxText-->
         <p class="boxText">Maui devised a plan to capture the powerful sun. He crafted a special net and laid a trap, snaring the sun and forcing it to slow its blazing journey across the sky.</p>
       </div>
+
+
+
+           <!--Box 3 div with applied the class of box-->
       <div class="box">
-        <h3 class="title">Maui in Today's World</h3>
-        <a href="#mauiToday">
-          <div class="img-box">
-            <img src="MauiGod.png" alt="Maui in Today's World">
+        <h3 class="title">Maui in Today's World</h3><!--Adds title to box 2 and adds the tile class-->
+        <a href="#mauiToday">   <!--links to the Maui Today section so when user clicks hte image it link to the How Maui today section-->
+          <div class="imgBox">
+            <img src="MauiGod.png" alt="Maui in Today's World"><!--Image of Maui Today inside a div with a class called imgageBox-->
           </div>
         </a>
+        <!--text about Maui Today in a div called boxText-->
         <p class="boxText">While Maui's legendary feats are part of ancient history, his spirit lives on in stories and art, reminding us of his bravery and cleverness.</p>
       </div>
     </div>
-  </div>
-</section>
+  
+  </div> <!--End of div  called contentForMainAboutPage-->
+</section>     
+ <!--End of Main Section -->
 
+ <!--Start of darks days Section -->
 <section id="darkDays">
+   <!--imagae about the dark days -->
   <img class ="aboutPageImage" src="darkdays2.png"alt="dark days image">
+ 
+  <!-- Div containing all the written content for the "Dark Day" section. It contains a title with a class of "section-title," a quote with an id of "quote," and a body paragraph with an id of "body-paragraph." -->
   <Div id="aboutPageInformation">
      <h1 class="sectionTiltle">The dark days</h2>
      <p class= "quote">"I ia ra me oma tatou ki te mahi i a tatou mahi me te kohi kai i mua i te torengitanga o te ra. He aha tatou hei taurekareka ma te ra?"</p>
@@ -64,20 +88,28 @@
       The land was enveloped in a feeling of urgency and unrest during these gloomy days. The sun's quick ascent left people with only a few brief seconds to secure their food, thus fishing, hunting, and gathering food became rushed activities. Maui was not happy and decided he must take matters into his own hands and prolong the length of the days. </p>
   </Div>
 </section>
+ <!--End of darks days Section -->
 
-
+ <!--Start of How Maui cptured the Sun section -->
 <section id="sunCapture">
- <img class ="aboutPageImage" src="Untitled-2 copy.png"alt="img of maui cpaturing the sun">
+ <!--Image of maui capturing the sun with the class of aboutPageImage-->
+ <img class ="aboutPageImage" src="Untitled-2 copy.png"alt="img of maui cpaturing the sun">  
+
+<!-- Div containing all the written content for the About page's "How maui captured the sun" section. It contains a title with a class of "section-title," a quote with an id of "quote," and a body paragraph with an id of "body-paragraph." -->
  <Div id="aboutPageInformation">
    <h1 class="sectionTiltle">How Maui Captured the Sun</h2>
    <p class= "quote">"Me whakaroa te ra."</p>
    <p class="bodyParagraph">With a group of one hundred men, Maui set off on his quest. He set out to control the sun's erratic course across the skies, armed with strong flax ropes and unflinching resolve. Maui lassoed the sun's ferocious rays, using his incredible strength to cause the blazing orb to slow down. In order to get the sun to obey, he even threatened to cut off its legs. The sun pleaded with Maui for pity as he faced his strength and tenacity, vowing to traverse across the sky slower. Form then on the poeple of the land  had plenty of time to carry out their everyday activities thanks. The longer daylight hours allowed the people to pursue their interests and grow their livelihoods.</p>
  </Div>
 </section>
+ <!--End of How Maui cptured the Sun section -->
 
+  <!--Start of Maui Today Section -->
 <section id="mauiToday">
+ <!--Image of maui today with the class of aboutPageImage-->
  <img class ="aboutPageImage" src="Maui copy.png"alt="image of maui today">
-  <Div id="aboutPageInformation">
+ <!-- Div containing all the written content for the About page's "Maui Today" section. It contains a title with a class of "section-title," a quote with an id of "quote," and a body paragraph with an id of "body-paragraph." -->
+ <Div id="aboutPageInformation">
    <h1 class="sectionTiltle">How Maui Captured the Sun</h1>
    <p class= "quote">"Me whakaroa te ra."</p>
    <p class="bodyParagraph">Maui's and sun is an aicninet tale however it still holds major signifincance in maoir cluture. He highlights to us the importnace of tenacity and creativity and reinforcing  the importance of working hard to accomplish goals. The concept of harnessing the sun's power for human advancement is reinforced by the sun's symbolism of life energy . Maui's achievement highlights the interdependence of the mind and body; his clever reasoning and muscular acts demonstrate the possibility of combining knowledge and prowess. The story encourages us to overcome issues ingeniously in a world filled with difficulties. It exhorts embracing challenges as opportunities for development and harnessing the power of the human spirit to achieve greatness. Maui's triumph over the sun serves as a lesson in how hard work, resourcefulness, and the quest for knowledge may help us discover our hidden talents and illuminate the course of our lives. </p>
