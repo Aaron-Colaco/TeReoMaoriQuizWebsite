@@ -329,7 +329,7 @@ transition: transform 0.3s ease;
 .quizTitle {
   margin-top: 3%;
   text-align: center;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   font-weight:900;
   font-size: 50px;
 }
@@ -441,12 +441,13 @@ width: 30%;
   background-color: #ff8800;
   color: #000000;
   text-decoration: none;
-  padding-bottom: 2%;
+  padding-bottom: 4%;
   padding-top: 3%;
   font-family: sans-serif;
   border-radius: 25px;
   text-align: center;
   align-items: center;
+  font-size: 20px;
 }
 /*Styles for home button a tag */
 .homeButton a{
