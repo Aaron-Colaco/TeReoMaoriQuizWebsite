@@ -2,21 +2,21 @@
 /*Style for nav bar*/
 #navbar {
   position: fixed; /* keeps the nav bar in place while scrolling*/
-  top: 0px; /* leaves no space bettwen top of page and nav bar*/
+  top: 0px; /* leaves no space between top of page and nav bar*/
   left: 0;
   width: 100%;
   box-sizing: border-box;
   background-color: #000000;
-  z-index: 1000; /* postions it behind all other objects*/
+  z-index: 1000; /* positions it behind all other objects*/
   }
   
   /*Style for nav bar a tag */
   #navbar a {
-  text-decoration: none; /* Rmeove default decoration */
+  text-decoration: none; /* Remove default decoration */
   color: #ffffff;  
   margin-right: 20px;
   font-weight: bold;
-  transition: transform 0.2s, color 0.2s, text-shadow 0.2s; /* apple smooth transtion that trnasofrm the shpae adds colour and a text shadow*/
+  transition: transform 0.2s, color 0.2s, text-shadow 0.2s; /* apple smooth transition that transform the shape adds colour and a text shadow*/
   display: inline-block;
   padding: 10px 20px;
   width: 90px;
@@ -43,15 +43,15 @@
     body::-webkit-scrollbar {
       width: 10px;
     }
-       /* Set the corner colour to ornage*/
+       /* Set the corner colour to orange*/
     body::-webkit-scrollbar-corner {
       background: #ff6200;
     }
-       /*set the scroll bar track to balck */
+       /*set the scroll bar track to black */
     body::-webkit-scrollbar-track {
       background: #000000;
     }
-       /*Styles the dragbale sqaure of the scroll bar making it ornage */
+       /*Styles the draggable rectangle of the scroll bar making it orange */
     body::-webkit-scrollbar-thumb {
       background: #ff6200;
     }
@@ -59,12 +59,13 @@
 
 /* Body and html styles */
 body, html {
-  margin: 0; /* sets margin and padding to 0 to remove deafult white space set by some browers*/
+  margin: 0; /* sets margin and padding to 0 to remove default white space set by some browsers*/
   padding: 0;
   font-family: sans-serif;  
  background-color: #000000;
  min-width: 1000px ; /*Sets the minium width of the website*/
- min-height: 100px; /*Sets the minium hieght of the website*/
+ min-height: 100px; /*Sets the minium height of the website*/
+ scroll-behavior: smooth; /*Allows for smooth scrolling*/
 }
 
 
@@ -74,21 +75,21 @@ body, html {
 .home{
 height: 100vh; /* sets the height to 100 percent of the viewport height*/
 background: linear-gradient(-45deg, #1064d1, #000000, #ff9d00, #ff5100);
-background-size: 400% 400%; /* sets the height and width of the backgeound */
-animation: backgorundGradient 15s ease infinite; /*creates a aniamtion called backgorundGradient*/
+background-size: 400% 400%; /* sets the height and width of the background */
+animation: backgorundGradient 15s ease infinite; /*creates a animation called backgorundGradient*/
 }
 /*At 0% of the animation*/
   @keyframes backgorundGradient {
 0% {
-  /*change the psotion of the background*/
+  /*change the position of the background*/
   background-position: 0% 50%;
 }
 50% {
-    /*change the psotion of the background*/
+    /*change the position of the background*/
   background-position: 100% 50%;
 }
 100% {
-    /*change the psotion of the background*/
+    /*change the position of the background*/
   background-position: 0% 50%;
 }
 }
@@ -107,16 +108,16 @@ color: white;
 margin-left: 25%;
 margin-right: 25%;
 margin-top: 20%;
-display: inline-block; /*allows for elements/object to apear on the same line */
+display: inline-block; /*allows for elements/object to appear on the same line */
 margin-bottom: 20px;
 
 }
 
 /*Styles for find out more button on home page */
 #findOutbutton {
-display: inline-block;/*allows for elements/object to apear on the same line */
-padding: 10px 20px;/*adds padding arround the button*/
-margin-top: 5%;/*sets the marigns*/
+display: inline-block;/*allows for elements/object to appear on the same line */
+padding: 10px 20px;/*adds padding around the button*/
+margin-top: 5%;/*sets the margins*/
 margin-left: 60%;
 margin-right: 20px;
 text-decoration: none;/*removes the default underline of the link*/
@@ -128,7 +129,7 @@ border-radius: 2px;
 
 
 }
-/* Adds a hover effect to the find out more button changing the backgorund colour and text colour */
+/* Adds a hover effect to the find out more button changing the background colour and text colour */
 #findOutbutton:hover {
 background-color: white;
 color: black;}
@@ -138,7 +139,7 @@ color: black;}
 
 /*Styles for the sections in the about page*/
   section {
-    /*sets the max width and viweport hight height to 100% width*/
+    /*sets the max width and viewport hight height to 100% width*/
     width: 100%;
     height: 100vh;
     overflow: auto; /* when content overfills the container, add the scroll bars */
@@ -148,13 +149,13 @@ color: black;}
   
    /*style for content div in the home page */
    .contentForMainAboutPage{
-    max-width: 1200px;    /*sets the max width of the contianer to 1200px  */
+    max-width: 1200px;    /*sets the max width of the container to 1200px  */
     margin: 0 auto;       /*sets the margin to auto and 0 */
     padding: 9px;
   }
-  /*style for content in the boxs*/
+  /*style for content in the boxes*/
     .boxes{
-    display: flex;   /*Sets the flex box layer to the contianer */
+    display: flex;   /*Sets the flex box layer to the container */
     justify-content: space-between; /*Give everything a fair amount of room by moving things to the sides.*/
     gap: 20px; /*20px between flex items */
   }
@@ -166,7 +167,7 @@ color: black;}
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* when content overfills the container, hide the content that overflows */
-    display: flex;  /*Sets the flex box layer to the contianer */
+    display: flex;  /*Sets the flex box layer to the container */
     flex-direction: column; /*make items vertically aligned*/
   }
 
@@ -174,20 +175,20 @@ color: black;}
 
    /*Style for image box*/
 .imgBox {
-display: flex; /*Sets the flex box layer to the contianer */
-align-items: center;/* aligns the items to the cneter of the div */
-justify-content: center; /* justifity content to the cneter */
-position: relative; /* psotion is relative to the box conatiner */
+display: flex; /*Sets the flex box layer to the container */
+align-items: center;/* aligns the items to the center of the div */
+justify-content: center; /* justify content to the center */
+position: relative; /* position is relative to the box container */
 overflow: hidden;} /* when content overfills the container, hide the content that overflows */
  
 /*Style for the image in the box*/
 .imgBox img {
-  /* set the max widht and height */
+  /* set the max width and height */
 max-width: 100%;
 max-height: 100vh;
 transition: transform 0.3s ease;
 }
- /*Stylefor images when user hovers over the images*/
+ /*Style for images when user hovers over the images*/
   .imgBox:hover img {
     transform: scale(1.1);
   }
@@ -208,7 +209,7 @@ transition: transform 0.3s ease;
   .boxText {
     padding: 3%;
     text-align: center;
-    /* Add rouned borders */
+    /* Add rounded borders */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
@@ -229,7 +230,7 @@ transition: transform 0.3s ease;
 }
    /*Styles for the about page image class */
 .aboutPageImage{
-  float: left; /*Make elemnt float/ go to the left */
+  float: left; /*Make elements float/ go to the left */
   width: 30%;
   height: 80%;
   border-radius: 7%;
@@ -245,7 +246,7 @@ transition: transform 0.3s ease;
   padding-bottom: 3%;
  
 }
-   /*Styles for the aboutPage informaton class */
+   /*Styles for the aboutPage information class */
 .aboutPageInformation{
   float: left;
   width: 45%;
@@ -263,10 +264,10 @@ transition: transform 0.3s ease;
 
    /*Styles for the body of the quiz html file */
 #quiz {
-  display: flex; /*Sets the flex box layer to the contianer */
-  justify-content: center; /*Justifiy the content to center*/
-  align-items: center; /*Align content to the cneter */
-  text-align: center; /*Text content to the cneter */
+  display: flex; /*Sets the flex box layer to the container */
+  justify-content: center; /*Justify the content to center*/
+  align-items: center; /*Align content to the center */
+  text-align: center; /*Text content to the center */
   height: 100vh;
   width: 100%;
   overflow: hidden; /* when content overfills the container, hide the content that overflows */
@@ -324,7 +325,7 @@ transition: transform 0.3s ease;
 
 
 
-   /*Styles for the Quiz tiltles */
+   /*Styles for the Quiz titles */
 .quizTitle {
   margin-top: 3%;
   text-align: center;
@@ -333,7 +334,7 @@ transition: transform 0.3s ease;
   font-size: 50px;
 }
 
-   /*Styles for the insturctions  */
+   /*Styles for the instructions  */
 .insturctions {
   font-family: sans-serif;
   font-size: 20px;
@@ -341,7 +342,7 @@ transition: transform 0.3s ease;
 
 }
 
-   /*Lstyles for level box buttons */
+   /*styles for level box buttons */
 
 #levelBox button {
 
@@ -398,7 +399,7 @@ transition: transform 0.3s ease;
 #score {
   font-weight: bold;
 }
-  /*Styles for score text chnaegs the font size*/
+  /*Styles for score text changes the font size*/
 .scoreText {
   font-size: 30px;
 }
@@ -421,13 +422,13 @@ transition: transform 0.3s ease;
   font-family: Impact, sans-serif;
   letter-spacing:4px;
 }
-/*Styles for Personlized Message*/
+/*Styles for Personalized Message*/
 #personlizedMessage{
   font-family: sans-serif;
   font-size: 15px;
   padding: 2%;
 }
-/*Styles final score meesage*/
+/*Styles final score message*/
 #finalScoreMessage{
   font-size: 30px;
   font-family: sans-serif;
