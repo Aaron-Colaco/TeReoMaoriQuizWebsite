@@ -139,7 +139,7 @@ function endOfQuiz() {
 
   // checks if the user percentage is above 30 and changes the perozionlaized message inner html to a personalized message including the user name and their points. Also diplsay hwo much need for a perfect score. 
   if (percentage > 30) {
-    personalizedMessage.innerHTML = userName.value + " that's a good score. Have another go; you are only " + (questionsArray.length - points) + " correct answer(s) away  away from a perfect score. Consider doing some research about the Maori culture or check out the 'About' section to learn more.";
+    personalizedMessage.innerHTML = userName.value + " that's a good score. Have another go; you are only " + (questionsArray.length - points) + " correct answer(s) away from a perfect score. Consider doing some research about the Maori culture or check out the 'About' section to learn more.";
     personalizedMessage.style.color = "green"// sets the colour of the text to green 
   }
 
