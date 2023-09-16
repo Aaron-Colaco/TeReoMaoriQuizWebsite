@@ -1,97 +1,125 @@
+
+/*Style for nav bar*/
+#navbar {
+  position: fixed; /* keeps the nav bar in place while scrolling*/
+  top: 0px; /* leaves no space bettwen top of page and nav bar*/
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000;
+  z-index: 1000; /* postions it behind all other objects*/
+  }
+  
+  /*Style for nav bar a tag */
+  #navbar a {
+  text-decoration: none; /* Rmeove default decoration */
+  color: #ffffff;  
+  margin-right: 20px;
+  font-weight: bold;
+  transition: transform 0.2s, color 0.2s, text-shadow 0.2s; /* apple smooth transtion that trnasofrm the shpae adds colour and a text shadow*/
+  display: inline-block;
+  padding: 10px 20px;
+  width: 90px;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  }
+  /* hover effect for nav bar */
+  #navbar a:hover {
+  color: #ffffff; 
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* adds a text shadow*/
+  font-size: 28px; 
+  transition: 1s; /* sets the duration of the transition */
+  }
+  /* styles for logo */
+  #logo{
+    margin-left: 50%;
+    width: 15%;
+    height: 7vh;
+    overflow: hidden;  /* when content overfills the container, hide the content that overflows */
+    }
+    
+   /* Set the width of the scrollbar to 10px*/
+    body::-webkit-scrollbar {
+      width: 10px;
+    }
+       /* Set the corner colour to ornage*/
+    body::-webkit-scrollbar-corner {
+      background: #ff6200;
+    }
+       /*set the scroll bar track to balck */
+    body::-webkit-scrollbar-track {
+      background: #000000;
+    }
+       /*Styles the dragbale sqaure of the scroll bar making it ornage */
+    body::-webkit-scrollbar-thumb {
+      background: #ff6200;
+    }
+
+
+/* Body and html styles */
 body, html {
-  margin: 0;
+  margin: 0; /* sets margin and padding to 0 to remove deafult white space set by some browers*/
   padding: 0;
   font-family: sans-serif;  
  background-color: #000000;
-
+ min-width: 1000px ; /*Sets the minium width of the website*/
+ min-height: 100px; /*Sets the minium hieght of the website*/
 }
 
+
+/* style for home page */
+
+/* style for home page body*/
 .home{
-margin: 0;
-padding: 0;
-height: 100vh;
+height: 100vh; /* sets the height to 100 percent of the viewport height*/
 background: linear-gradient(-45deg, #1064d1, #000000, #ff9d00, #ff5100);
-background-size: 400% 400%;
-animation: backgorundGradient 15s ease infinite;
+background-size: 400% 400%; /* sets the height and width of the backgeound */
+animation: backgorundGradient 15s ease infinite; /*creates a aniamtion called backgorundGradient*/
 }
+/*At 0% of the animation*/
   @keyframes backgorundGradient {
 0% {
+  /*change the psotion of the background*/
   background-position: 0% 50%;
 }
 50% {
+    /*change the psotion of the background*/
   background-position: 100% 50%;
 }
 100% {
+    /*change the psotion of the background*/
   background-position: 0% 50%;
 }
 }
-
+/*Styles for the main header in the home page*/
 #mainHeader {
 font-size: 70px;
 font-weight: bold;
-
 }
+/*Styles for the description on home page */
 #description {
   font-size: 24px;
     }
-
+/*Styles for all the text on the home page */
 #homepageText{
 color: white;
 margin-left: 25%;
 margin-right: 25%;
 margin-top: 20%;
-display: inline-block;
+display: inline-block; /*allows for elements/object to apear on the same line */
 margin-bottom: 20px;
 
 }
-#homepagetext:hover {
-transform: scale(1.05);
-}
 
-#navbar {
-position: fixed;
-top: 0px;
-left: 0;
-width: 100%;
-box-sizing: border-box;
-background-color: #000000;
-z-index: 1000;
-}
-
-#navbar a {
-text-decoration: none;
-color: #ffffff; 
-margin-right: 20px;
-font-weight: bold;
-transition: transform 0.2s, color 0.2s, text-shadow 0.2s; 
-display: inline-block;
-padding: 10px 20px;
-width: 90px;
-position: relative;
-overflow: hidden;
-font-size: 20px;
-}
-
-#navbar a:hover {
-color: #ffffff; 
-text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
-font-size: 28px; 
-transition: 1s;
-}
-
-
-
-
-
-
-
-#findOutboutton {
-display: inline-block;
-padding: 10px 20px;
-margin-top: 5%;
+/*Styles for find out more button on home page */
+#findOutbutton {
+display: inline-block;/*allows for elements/object to apear on the same line */
+padding: 10px 20px;/*adds padding arround the button*/
+margin-top: 5%;/*sets the marigns*/
 margin-left: 60%;
 margin-right: 20px;
-text-decoration: none;
+text-decoration: none;/*removes the default underline of the link*/
 color: white;
 font-weight: bold;
 border: 2px solid white; 
@@ -100,83 +128,71 @@ border-radius: 2px;
 
 
 }
-
-#findOutboutton a:hover {
+/* Adds a hover effect to the find out more button changing the backgorund colour and text colour */
+#findOutbutton:hover {
 background-color: white;
 color: black;}
 
-#logo{
-margin-left: 50%;
-width: 15%;
-height: 7vh;
-overflow: hidden;
-}
 
 /*style for about page */
-body::-webkit-scrollbar {
-  width: 10px;
-}
 
-body::-webkit-scrollbar-corner {
-  background: #ff6200;
-}
-
-body::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #ff6200;
-}
+/*Styles for the sections in the about page*/
   section {
+    /*sets the max width and viweport hight height to 100% width*/
     width: 100%;
     height: 100vh;
-    overflow: auto;
+    overflow: auto; /* when content overfills the container, add the scroll bars */
     padding-top: 4%;
-  }
-  #main, #darkDays, #sunCapture,#mauiToday {
     background-color: rgb(0, 0, 0);
   }
+  
+   /*style for content div in the home page */
    .contentForMainAboutPage{
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;    /*sets the max width of the contianer to 1200px  */
+    margin: 0 auto;       /*sets the margin to auto and 0 */
     padding: 9px;
   }
-
+  /*style for content in the boxs*/
     .boxes{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex;   /*Sets the flex box layer to the contianer */
+    justify-content: space-between; /*Give everything a fair amount of room by moving things to the sides.*/
+    gap: 20px; /*20px between flex items */
   }
-
+  /*Style for each box*/
   .box {
-    width: 30%;
+    width: 30%; 
     min-height: 70vh;
     background-color: #ffc935;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden; /* when content overfills the container, hide the content that overflows */
+    display: flex;  /*Sets the flex box layer to the contianer */
+    flex-direction: column; /*make items vertically aligned*/
   }
 
-.imgBox {
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-overflow: hidden;}
+ 
 
+   /*Style for image box*/
+.imgBox {
+display: flex; /*Sets the flex box layer to the contianer */
+align-items: center;/* aligns the items to the cneter of the div */
+justify-content: center; /* justifity content to the cneter */
+position: relative; /* psotion is relative to the box conatiner */
+overflow: hidden;} /* when content overfills the container, hide the content that overflows */
+ 
+/*Style for the image in the box*/
 .imgBox img {
+  /* set the max widht and height */
 max-width: 100%;
 max-height: 100vh;
 transition: transform 0.3s ease;
 }
+ /*Stylefor images when user hovers over the images*/
   .imgBox:hover img {
     transform: scale(1.1);
   }
 
-
+ /*Style for the titles in the about page*/
   .title {
     background-color: #ffc935;
     padding: 5px;
@@ -188,19 +204,22 @@ transition: transform 0.3s ease;
     text-align: center;
     
   }
-
+ /*Styles for the text in the boxes on the about page*/
   .boxText {
     padding: 3%;
     text-align: center;
+    /* Add rouned borders */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
+   /*Styles for the about page title*/
   .aboutPageTitles{
     margin-top: 4%;
     padding-bottom: 1%;
     color: #ffff;
-    text-align: center;
+    text-align: center; /*align text to the center*/
   }
+   /*Styles for the section title */
 .sectionTiltle{
   margin-top: 4%;
   padding-top: 2%;
@@ -208,50 +227,53 @@ transition: transform 0.3s ease;
   text-align: center;
   font-size: 25px;
 }
+   /*Styles for the about page image class */
 .aboutPageImage{
-  float: left;
+  float: left; /*Make elemnt float/ go to the left */
   width: 30%;
   height: 80%;
   border-radius: 7%;
+ /*set the margins*/
   margin-left: 2%;
   margin-top: 5%;
   margin-bottom: 0;
 }
-
+   /*Styles for the quote class*/
 .quote{
   font-weight: bolder;
   font-size: 30px;
   padding-bottom: 3%;
  
 }
-#aboutPageInformation{
+   /*Styles for the aboutPage informaton class */
+.aboutPageInformation{
   float: left;
   width: 45%;
   color: #ffffff;
   font-size: 25px;
   text-align: center;
   padding-left: 8%;
-  text-justify: distribute;
+  text-justify: distribute; /* distribute the spaces between words evenly */
   padding-top: 10px;
 }
 
 
-/* quiz */
+/* Styles quiz.html */
 
+
+   /*Styles for the body of the quiz html file */
 #quiz {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  display: flex; /*Sets the flex box layer to the contianer */
+  justify-content: center; /*Justifiy the content to center*/
+  align-items: center; /*Align content to the cneter */
+  text-align: center; /*Text content to the cneter */
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* when content overfills the container, hide the content that overflows */
   background-color: rgb(0, 0, 0);
 }
 
-
-
-
+/*Styles for the quizContent div */
 .quizContent{
   align-self: center;
   border-radius: 10px;
@@ -265,10 +287,7 @@ transition: transform 0.3s ease;
   overflow: auto;
 }
 
-
-
-
-
+ /*Styles for the userName div */
 #userName {
   background-color: hsl(34, 100%, 90%);
   border: #ff8800;
@@ -283,12 +302,12 @@ transition: transform 0.3s ease;
 
 }
 
-
+   /*Styles for the placeHolder text*/
 ::placeholder {
   color: #000000;
   opacity: 50%;
 }
-
+   /*Styles for the start Quiz Button and next button*/
 #startQuizButton,
 #nextButton
 {
@@ -302,22 +321,10 @@ transition: transform 0.3s ease;
   margin-left: 1%;
   
 }
-#startQuizButton:hover {
-  background-color: hsl(19, 100%, 47%);
-  color: #ffffff;
-}
 
- .text {
-  color: #000000;
-  font-family: sans-serif;
-  padding-bottom: 10px;
-  padding-top: 3%;
-  margin-bottom: 10%;
-  padding-right: 5%;
-  padding-left: 5%;
-  font-size: 20px;
-}
 
+
+   /*Styles for the Quiz tiltles */
 .quizTitle {
   margin-top: 3%;
   text-align: center;
@@ -326,12 +333,15 @@ transition: transform 0.3s ease;
   font-size: 50px;
 }
 
+   /*Styles for the insturctions  */
 .insturctions {
   font-family: sans-serif;
   font-size: 20px;
   color: #000000;
 
 }
+
+   /*Lstyles for level box buttons */
 
 #levelBox button {
 
@@ -348,11 +358,8 @@ transition: transform 0.3s ease;
 
 }
 
-#levelBox button:hover {
-  background-color: hsl(19, 100%, 47%);
-  color: #000000;
-}
 
+  /*Styles for welcome text and welcome message class and id*/
 .welcomeText,
 #welcomeMessage {
   padding-bottom: 5%;
@@ -360,15 +367,14 @@ transition: transform 0.3s ease;
 
 }
 
-
+  /*Styles for option buttons*/
 .optionButtons {
-
   width: 100%;
   margin-bottom: 5%;
   margin-top: 5%;
 
 }
-
+ /*Styles for option buttons*/
 .optionButtons button {
   background-color: #ff8800;
   font-family: sans-serif;
@@ -376,56 +382,58 @@ transition: transform 0.3s ease;
   font: white;
   width: 35%;
   height: 8vh;
-  border-radius: 30px;
+  border-radius: 30px;   /* makes buttons rounded */
   margin: 2%;
   border-color: #ff8800;
 }
-
+  /*Styles for hover effects for buttons in quiz*/
 .optionButtons button:hover,
-#nextButton:hover,.redoButton:hover,.homeButton:hover {
+#nextButton:hover,.redoButton:hover,.homeButton:hover,.homeButton a:hover,#startQuizButton:hover,#levelBox button:hover  {
   background-color: hsl(19, 100%, 47%);
   color: #ffffff;
 }
-
+  /*bold the fonts for some headers */
 #quizBox h1,
 #quizBox h3,
 #score {
   font-weight: bold;
 }
-
+  /*Styles for score text chnaegs the font size*/
 .scoreText {
   font-size: 30px;
 }
-
+/*Styles for next button */
 #nextButton{
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 10px; /*adds rounded buttons */
+  font-size: 20px; 
   padding: 0;
   height: 7vh;
   width: 30%;
   margin-left: 35%;
   margin-right: 35%;
-  text-align: center;
+  text-align: center; /*aligns text to center*/
   margin-top: 10%;
-
-
 }
+
+/* Styles Percentage Text*/
 #percentage{
   font-size: 80px;
   font-family: Impact, sans-serif;
   letter-spacing:4px;
 }
+/*Styles for Personlized Message*/
 #personlizedMessage{
   font-family: sans-serif;
   font-size: 15px;
   padding: 2%;
 }
+/*Styles final score meesage*/
 #finalScoreMessage{
   font-size: 30px;
   font-family: sans-serif;
   padding: 3%;
 }
-
+/*Styles for redo menu buttons */
 .redoButton, .redoButtons a,.homeButton{
  height: 5vh; 
 width: 20%;
@@ -439,9 +447,8 @@ width: 20%;
   text-align: center;
   align-items: center;
 }
+/*Styles for home button a tag */
 .homeButton a{
 text-decoration: none;
-}
-#redoText{
-  font-family: sans-serif;
+color: #000000;
 }

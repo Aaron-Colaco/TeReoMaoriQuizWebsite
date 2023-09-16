@@ -14,61 +14,83 @@
    <!-- Html code for nav bar -->
   <div id="navbar">
     <nav>
+  <!--a tags with links to the diffrent pages -->
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="quiz.html">Quiz</a>
-    <img id="logo" src="Screenshot 2023-08-18 at 12.45.19 PM copy.png" alt="">
-    
-    </nav>
+    <img id="logo" src="Screenshot 2023-08-18 at 12.45.19 PM copy.png" alt="">  <!--Adds the logo to the nav bar-->
+   </nav>
  </div>
+  <!--End of nav bar Div-->
 
+  
+   <!--div to store quiz content (the white box on the screen that the quiz is in)-->
   <div class="quizContent">
   
+
+ <!--Div for welcomeing the user and get the users name-->
     <div class="nameInputBox">
+       <!--Displays Welcome Message-->
       <h1 class=quizTitle> Welcome To The Quiz</h1>
+       <!--Display welcome text-->
       <p class=text>Nau mai ki te patapatai mo te reo Maori, with a special focus on the Maui and the Sun myth. The quiz
         comprises three levels of increasing difficulty, designed to test your knowledge of the Maori language and
         culture. </p>
+         <!--Ask user to enter their name and provides a input box-->
       <h1 class=welcomeText>Please enter your name to begin <br>
         <input type="text" placeholder="Enter Name Here" id="userName">
+         <!--When button is cliked run the JS function called getValidatedName-->
         <button id="startQuizButton" onclick="getValidatedName()">Start Quiz</button>
     </div>
 
 
-
-    <div id="levelBox" style="display: none;">
-      <h1 id="welcomeMessage"></h1>
+ <!--div containting the level options, the div is hidden at the start-->
+      <div id="levelBox" style="display: none;">
+      <!--dispaly welcome message and instructions-->
+      <h1 id="welcomeMessage"></h1>  
       <h1 class="insturctions">What level do you want to do? Please click the buttons below</h1>
+     <!--Buttons for easy medium and hard mode that even clicked all call diffrent methods thats runs the quiz for the level they pciked.-->
       <button onclick="easyLevel()">Easy</button>
       <button onclick="mediumLevel()">Medium</button>
       <button onclick="hardLevel()">Hard</button>
     </div>
 
-
+<!--Div  that holds the main part of the quiz that ask the questions also hiddent by default-->
     <div id="quizBox" style="display: none;">
 
-      <h3 id="progresss">progrss Question 0/0</h3>
-      <h1 id="question">Here goes the question</h1>
-      <div class="optionButtons">
-        <button id="option1" onclick="checkAnswer(1)">Option 1</button>
-        <button id="option2" onclick="checkAnswer(2)">Option 2</button>
-        <button id="option3" onclick="checkAnswer(3)">Option 3</button>
-        <button id="option4" onclick="checkAnswer(4)">Option 4</button>
-      </div>
-
-      <h1 id="feedback"></h1>
-      <div class="scoreText">
-        <p>Score: <span id="score">0</span></p>
+      
+      <h3 id="progresss">progrss Question 0/0</h3><!--dispaly progress-->
+      <h1 id="question">Here goes the question</h1><!--displays the question-->
+      
+      <div class="optionButtons"><!--Div that stores the option buttons-->
+        <!--When a option button is clicked it will call a function called Check Answer and pass in a number as a parrmeter-->
+        <button id="option1" onclick="checkAnswer(1)">Option 1</button> <!--button 1 calls check answer pass in the number 1-->
+        <button id="option2" onclick="checkAnswer(2)">Option 2</button><!--button 2 calls check answer pass in the number 2-->
+        <button id="option3" onclick="checkAnswer(3)">Option 3</button><!--button 3 calls check answer pass in the number 3-->
+        <button id="option4" onclick="checkAnswer(4)">Option 4</button><!--button 4 calls check answer pass in the number 4-->
+      </div> 
+      <h1 id="feedback"></h1><!--h1 tag with a id called feedback to display feedback using JS-->
+     
+      <div class="scoreText"><!--Div contaning the score-->
+        <p>Score: <span id="score">0</span></p><!--span and p tag used to store the score-->
+        <!--When the next button is pressed it will called a function called nextquestion.-->
         <button id="nextButton" style="display: none;" onclick="nextQuestion()">Go to Next Question</button>
       </div>
 
-      </div>
+     </div>
+     <!-- End of Div that holds the question and answers-->
+
+
+<!--Div  that holds the replay menu not visable by default -->
       <div id="replayMenu" style="display: none;">
+         <!--displays the final socre message, percentage text, and perzionaled message on the screen-->
         <h1  id = "finalScoreMessage"></h1>
         <div id = "percentage">0</div>
         <div id = "personlizedMessage">Quiz messgae</div>
-        <h4  id = "redoText">Would you like to go home or go to the level menu</h4>
+        <h4  id = "redoText">Would you like to go home or go to the level menu</h4> <!--Asks the user if they want to go home or Redo the quiz-->
         <button class="homeButton"><a href="home.html"> Go Home</a></button>
+
+<!-- When the redo button is clicked it will call the loadMenu function in JS-->
         <Button class="redoButton" onclick="loadMenu()">Go To Level Menu</Button>
       </div>
     
